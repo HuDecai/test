@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>我的项目(我参与的)</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="description" content="你的描述内容"/> 
+    <meta name="keyword" content="关键字1,关键字2"/>
+    <link type="text/css" href="css/global.css" rel="Stylesheet" />
+    <link type="text/css" href="css/Garden.css" rel="Stylesheet" />
+    <script type="text/javascript" src="javascript/modernizr.custom.46884.js"></script>
+    <script type="text/javascript" src="javascript/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="javascript/global.js"></script>
+    <script type="text/javascript" src="javascript/jquery.slicebox.js"></script>
+    <link type="text/css" href="css/joker.css" rel="Stylesheet" />
+    <script type="text/javascript" src="javascript/joker.js"></script>
+    <script type="text/javascript">
+        $(function(){
+             $(".yourInput").focusInput();
+             modebtn();
+			 
+			$(".jxmcy_box .jxmcy_box_jx").each(function(i){
+				var a = $(this).find(".jzf_bb_con_time1");
+				a.attr("id","time_"+i);
+				var b = a.attr("data-time");
+				countDown(b, function (msg) {
+					$("#time_"+i).text(msg);
+				});
+			});
+			$(".jxmcy_box_jx_dbox11").hide();
+			$(".jzf_bb_con_click a").on("click",function(){
+				var box = $(this).parents(".jxmcy_box_jx");
+				box.find(".jxmcy_box_jx_dbox").show();
+				$(this).parent().hide();
+			});
+			$(".jzf_bb_con_click11").on("click",function(){
+				var box = $(this).parents(".jxmcy_box_jx");
+				box.find(".jxmcy_box_jx_dbox").hide();
+				box.find(".jzf_bb_con_click").show();
+			});
+					
+		});
+		
+		
+		function countDown(time, fn) {
+    var maxtime = (new Date(time) - new Date()) / 1000;//剩余秒
+
+    var timer = setInterval(function () {
+        if (maxtime >= 0) {
+            var dd = parseInt(maxtime / 60 / 60 / 24, 10);//计算剩余的天数  
+            var hh = parseInt(maxtime / 60 / 60 % 24, 10);//计算剩余的小时数  
+            var mm = parseInt(maxtime / 60 % 60, 10);//计算剩余的分钟数  
+            var ss = parseInt(maxtime % 60, 10);//计算剩余的秒数  
+            hh = checkTime(hh);
+            mm = checkTime(mm);
+            ss = checkTime(ss);
+
+            msg = "剩余 " + dd + "：" + hh + "：" + mm + "：" + ss ;
+            fn(msg);
+            --maxtime;
+        }
+        else {
+            clearInterval(timer);
+            fn("已结束");
+        }
+    }, 1000);
+}
+function checkTime(i) {
+    if (i < 10) {
+        i = "0" + i;
+    }
+    return i;
+}
+        
+    </script>
+  </head>
+  <body>
+    <div class="tcgc_header">
+        <div class="clear tcgc_header_box">
+            <div class="fl tcgc_header_boxfl"><a href="javascript:;" class="tcgc_logo"><img src="images/logo_photo.png" alt=""/></a><a href="javascript:;" class="tcgc_txt tcgc_hover3"><img src="images/set_notebook.png" alt=""/>发起人手册</a></div>
+            <div class="fr tcgc_pd">
+                <span class="tcgc_pdspan"></span>
+                <a href="javascript:;" class="tcgc_box tcgc_mrr tcgc_hover3 tcgc_newsobj" onclick="tcgcfb()"><img src="images/mine_icon_release.png" alt=""/>发布新项目</a>
+                <a href="javascript:;" class="tcgc_box tcgc_hover3 tcgc_loginregi" id="tcgc_headlogin" onclick="boxmask()">注册登录</a>
+                <span class="tcgc_hide">
+                    <span class="tcgc_mrr tcgc_hbox">
+                        <i class="tcgc_setlist_i"></i>
+                        <i class="tcgc_headimg"  id="tcgc_headimg"><img width="30" height="30"  src="images/1.jpg" alt=""/></i>
+                        <i class="tcgc_user">张启航</i>
+                        <span class="tcgc_setlist">
+                            
+                            <a class="tcgc_meobj tcgc_hover9" href="我的项目.html"><!--<img src="images/u46.png" alt="" width="21" height="20"/>--><span>我的项目</span>
+</a>
+                            <a class="tcgc_meset tcgc_hover9" href="设置.html"><!--<img src="images/u48.png" alt="" width="25" height="21"/>--><span>我的设置</span>
+</a>
+                            <a class="tcgc_meset tcgc_hover9" href="JavaScript:;" onclick="tcgcout()"><!--<img src="images/u48.png" alt="" width="25" height="21"/>--><span>退出</span>
+</a>
+                        </span>
+                    </span>
+                    <a href="javascript:;" class="tcgc_mrr tcgc_msg" title="未读消息10条"><i class="tcgc_yesmsg"><!--没消息去掉样式tcgc_yesmsg--></i><img width="20" height="26"  src="images/u30.png" alt=""/></a>
+                </span>
+            </div>
+        </div>
+
+    </div>
+    
+    <div class="jzf_b">
+    	<div class="jzf_bb2 jzf_bb22">
+        	<div class="tcgc_wfq_top clear">
+                           <div class="fl tcgc_wfq_toptab "><a href="我发起的.html">我发起的</a></div>
+                           <div class="fr tcgc_wfq_toptab tcgc_wfq_toptab_select"><a href="我的项目(我参与的).html">我参与的</a></div>
+                       </div>
+            <div class="jxmcy_box">
+            	
+            	<div class="jxmcy_box_jx">
+                	<ul>
+                        <li>
+                        	<img alt="" src="images/22.png" class="jzf_bb_con_po">
+                            <a class="jzf_bb_con_img"><img alt="" src="images/1.jpg"></a>
+                            <p class="jzf_bb_con_name">品牌</p>
+                            <p class="jzf_bb_con_name1">项目名称标题</p>
+                            <p class="jzf_bb_con_click"><a title="查看" href="javascript:;">查看详细</a></p>
+                        </li>
+                    </ul>
+                    <div class="jxmcy_box_jx_dbox jxmcy_box_jx_dbox11">
+                    	<p class="jzf_bb_con_time1"  data-time="2017-5-29 10:40:44"></p>
+                        <p class="jzf_bb_con_name1">项目名称标题</p>
+                        <p class="jzf_bb_con_click1">需要支付：¥8000.00<a title="取消" class="jzf_bb_con_click11">取消</a><input name="" type="button" class="jzf_bb_con_click12" value="重新支付"></p>
+                    </div>
+                </div>
+                
+                <div class="jxmcy_box_js">
+                	<ul>
+                        <li>
+                        	<img alt="" src="images/11.png" class="jzf_bb_con_po">
+                            <a class="jzf_bb_con_img"><img alt="" src="images/1.jpg"></a>
+                            <p class="jzf_bb_con_name">品牌</p>
+                            <p class="jzf_bb_con_name1">项目名称标题</p>
+                        </li>
+                    </ul>
+                    <div class="jxmcy_box_jx_dbox">
+                    	<p class="jzf_bb_con_time2">2016.08.08 08:08:08</p>
+                        <p class="jzf_bb_con_name1">项目名称标题</p>
+                        <p class="jzf_bb_con_click1">已支付：¥8000.00</p>
+                    </div>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+    
+    
+  </body>
+</html>

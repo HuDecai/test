@@ -1,0 +1,261 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>首页</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="description" content="你的描述内容"/> 
+    <meta name="keyword" content="关键字1,关键字2"/>
+    <link type="text/css" href="css/global.css" rel="Stylesheet" />
+    <link type="text/css" href="css/Garden.css" rel="Stylesheet" />
+    <script type="text/javascript" src="javascript/modernizr.custom.46884.js"></script>
+    <script type="text/javascript" src="javascript/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="javascript/global.js"></script>
+    <script type="text/javascript" src="javascript/jquery.slicebox.js"></script>
+    
+    <script type="text/javascript">
+        $(function(){
+             $(".yourInput").focusInput();
+            
+            
+            $("#sb-slider li").each(function(i){
+                if(i==0){
+                $('<span class="nav-dot-current"></span>').appendTo($("#nav-dots"));
+                }else{
+                $('<span></span>').appendTo($("#nav-dots"));
+                }
+            });
+
+				var Page = (function() {
+
+					var $nav = $("#nav-dots").children( 'span' ),
+						slicebox = $( '#sb-slider' ).slicebox( {
+							onReady : function() {
+
+							},
+							onBeforeChange : function( pos ) {
+
+								$nav.removeClass( 'nav-dot-current' );
+								$nav.eq( pos ).addClass( 'nav-dot-current' );
+
+							}
+						} ),
+						
+						init = function() {
+                            
+							initEvents();
+							
+						},
+						initEvents = function() {
+
+						
+
+							$nav.each( function( i ) {
+							
+								$( this ).on( 'click', function( event ) {
+									
+									var $dot = $( this );
+									
+									if( !slicebox.isActive() ) {
+
+										$nav.removeClass( 'nav-dot-current' );
+										$dot.addClass( 'nav-dot-current' );
+									
+									}
+									
+									slicebox.jump( i + 1 );
+									return false;
+								
+								} );
+								
+							} );
+
+						};
+
+						return { init : init };
+
+				})();
+
+				Page.init();
+            
+				//$(".tcgc_loginreg").fadeTo().eq($(this).index()).show();
+					
+        });
+       
+    </script>
+  </head>
+  <body>
+    <div class="tcgc_header">
+        <div class="clear tcgc_header_box">
+            <div class="fl tcgc_header_boxfl"><a href="javascript:;" class="tcgc_logo"><img src="images/logo_photo.png" alt=""/></a><a href="javascript:;" class="tcgc_txt tcgc_hover3"><img src="images/set_notebook.png" alt=""/>发起人手册</a></div>
+            <div class="fr tcgc_pd">
+                <span class="tcgc_pdspan"></span>
+                <a href="javascript:;" class="tcgc_box tcgc_mrr tcgc_hover3 tcgc_newsobj" onclick="tcgcfb()"><img src="images/mine_icon_release.png" alt=""/>发布新项目</a>
+                <a href="javascript:;" class="tcgc_box tcgc_hover3 tcgc_loginregi" id="tcgc_headlogin" onclick="boxmask()">注册登录</a>
+                <span class="tcgc_hide">
+                    <span class="tcgc_mrr tcgc_hbox">
+                        <i class="tcgc_setlist_i"></i>
+                        <i class="tcgc_headimg"  id="tcgc_headimg"><img width="30" height="30"  src="images/1.jpg" alt=""/></i>
+                        <i class="tcgc_user">张启航</i>
+                        <span class="tcgc_setlist">
+                            
+                            <a class="tcgc_meobj tcgc_hover9" href="我的项目.html"><!--<img src="images/u46.png" alt="" width="21" height="20"/>--><span>我的项目</span>
+</a>
+                            <a class="tcgc_meset tcgc_hover9" href="设置.html"><!--<img src="images/u48.png" alt="" width="25" height="21"/>--><span>我的设置</span>
+</a>
+                            <a class="tcgc_meset tcgc_hover9" href="JavaScript:;" onclick="tcgcout()"><!--<img src="images/u48.png" alt="" width="25" height="21"/>--><span>退出</span>
+</a>
+                        </span>
+                    </span>
+                    <a href="javascript:;" class="tcgc_mrr tcgc_msg" title="未读消息10条"><i class="tcgc_yesmsg"><!--没消息去掉样式tcgc_yesmsg--></i><img width="20" height="26"  src="images/u30.png" alt=""/></a>
+                </span>
+            </div>
+        </div>
+    </div>
+      <div class=""><div class="tcgc_border"></div></div>
+        
+      <!--banner图片尺寸是根据图片原始尺寸显示效果-->
+      <div class="tcgc_bannerbox">
+    <div class="tcgc_banner" style="background-color:#f2f2f2;">
+  <!--      <ul class="tcgc_banner_ul clear sb-slider" id="sb-slider">
+            <li><a href="javascript:;"><img src="images/1.jpg" alt="" title="" /></a></li>
+            <li><a href="javascript:;"><img src="images/2.jpg" alt="" title="" /></a></li>
+            <li><a href="javascript:;"><img src="images/1.jpg" alt="" title="" /></a></li>
+            <li><a href="javascript:;"><img src="images/2.jpg" alt="" title="" /></a></li>
+            <li><a href="javascript:;"><img src="images/1.jpg" alt="" title="" /></a></li>
+        </ul>
+        <div id="nav-dots" class="nav-dots">
+            
+        </div>-->
+    </div>
+          </div>
+    <div class="tcgc_content">
+        <div class="tcgc_ctile"><span>关于我们</span><span>APP</span></div>  
+        <div class="tcgc_cab">
+            <div style="background-color:#f5f5f5;height:500px;">
+                <p style="background-color:#f9f9f9;" class="tcgc_indexcanta">关于我们</p>
+            </div>
+        </div>
+        <div class="tcgc_capp">
+            <div style="background-color:#f5f5f5;height:500px;">
+                <p style="background-color:#f9f9f9;" class="tcgc_indexcanta">APP</p>
+            </div>
+        </div>
+    </div>
+    <div class="tcgc_footer">
+        <div class="tcgc_link">
+            <a href="javascript:;">关于我们</a> | 
+            <a href="javascript:;">同城共创</a> | 
+            <a href="javascript:;" onclick="returnhead()">返回顶部</a>
+        </div>
+        <div class="tcgc_beian">备案信息</div>
+    </div>
+      <div class="tcgc_maskbox">
+            <div class="tcgc_mask"></div>
+            <!--登录-->
+            <div class="tcgc_loginbox" id="tcgc_login">
+                <span class="tcgc_close" onclick="tcgcclose()"><i></i>x</span>
+                <div class="tcgc_logintoptba clear">
+                    <ul class="tcgc_logintoptba_ul">
+                        <li class="select"><a href="javascript:;">登录<i class="border"></i></a></li>
+                        <li><a href="javascript:;">注册<i class="border"></i></a></li>
+                    </ul>
+                </div>
+                <div class="tcgc_loginreg tcgc_login tcgc_show">
+                    <div class="tcgc_item">
+                        <div class="tcgc_itempd"><img src="images/u1060.jpg" class="width" alt=""/><input type="text" class="yourInput" value=""/><span class="tcgc_pop">手机号码</span></div>
+                        <div class="tcgc_erromsg"><!--提示输入错误信息--></div>
+                    </div>
+                    <div class="tcgc_item tcgc_item_clearbott">
+                        <div class="tcgc_itempd"><img src="images/u120.png" alt=""/><input type="password" class="yourInput"/><span class="tcgc_pop">密码</span></div>
+                        <div class="tcgc_erromsg"><!--提示输入错误信息--></div>
+                    </div>
+                    <div class="tcgc_tool clear">
+                        <a href="javascript:;" class="fr tcgc_wjpass" onclick="tcgczhm()">忘记密码</a>
+                    </div>
+                    <div class="tcgc_sub"><input type="submit" class="tcgc_subbtn" onclick="tcgclogin()" value="登录"/></div>
+                    <div class="tcgc_hztitle"><span class="tcgc_hztitle_span">使用第三方登录</span></div>
+                    <div class="tcgc_hzbtn">
+                        <a href="javascript:;" class="tcgc_qq"></a>
+                        <a href="javascript:;" class="tcgc_wx"></a>
+                        <a href="javascript:;" class="tcgc_wb"></a>
+                    </div>
+                </div>
+                <div class="tcgc_loginreg tcgc_reg">
+            <!--注册-->
+                    <div class="tcgc_item">
+                        <div class="tcgc_itempd"><img src="images/u106.png" alt=""/><input type="text" class="yourInput tcgcphone" value=""/><span class="tcgc_pop">请输入手机号码</span></div>
+                        <div class="tcgc_erromsg"><!--提示输入错误信息--></div>
+                        <img src="images/u144.png" class="tcgc_popimg tcgc_ok" alt=""/>
+                        <img src="images/u146.png" class="tcgc_popimg tcgc_error" alt=""/>
+                    </div>
+                    <div class="tcgc_item">
+                        <div class="tcgc_itempd"><img src="images/u106.png" alt=""/><input type="text" class="yourInput tcgc_code" value=""/>
+                            <span class="tcgc_borderx"></span>
+                            <input type="button" class="tcgc_codebtn tcgc_hover8" value="发送验证码" />
+                            <span class="tcgc_pop">请输入验证码</span></div>
+                        <div class="tcgc_erromsg"><!--提示输入错误信息--></div>
+                        <img src="images/u144.png" class="tcgc_popimg tcgc_ok" alt=""/>
+                        <img src="images/u146.png" class="tcgc_popimg tcgc_error" alt=""/>
+                    </div>
+                    <div class="tcgc_item">
+                        <div class="tcgc_itempd"><img src="images/u120.png" alt=""/><input type="password" class="yourInput tcgc_passw"/><span class="tcgc_pop">请输入6-8位的数字密码
+    </span></div>
+                        <div class="tcgc_erromsg"><!--提示输入错误信息--></div>
+                        <img src="images/u144.png" class="tcgc_popimg tcgc_ok" alt=""/>
+                        <img src="images/u146.png" class="tcgc_popimg tcgc_error" alt=""/>
+                    </div>
+                    <div class="tcgc_item">
+                        <div class="tcgc_itempd"><img src="images/u120.png" alt=""/><input type="password" class="yourInput tcgc_passwo"/><span class="tcgc_pop">请再次输入密码</span></div>
+                        <div class="tcgc_erromsg"><!--提示输入错误信息--></div>
+                        <img src="images/u144.png" class="tcgc_popimg tcgc_ok" alt=""/>
+                        <img src="images/u146.png" class="tcgc_popimg tcgc_error" alt=""/>
+                    </div>
+                    <div class="tcgc_sub"><input type="submit" class="tcgc_subbtn" value="注册并登录" onclick="tcgczhmm('.tcgc_reg .tcgcphone', '.tcgc_reg .tcgc_code', '.tcgc_reg .tcgc_passw', '.tcgc_reg .tcgc_passwo')"/></div>
+                    <div class="tcgc_tool clear">
+                        <a href="javascript:;" class="tcgc_reg tcgc_hover9" onclick="tcgczhlogin()">已有账号，账号登录</a>
+                    </div>
+                </div>
+                
+            </div>
+            <!--找回密码-->
+            <div class="tcgc_loginbox" id="tcgc_zhmm">
+                <span class="tcgc_close" onclick="tcgcclose()"><i></i>x</span>
+                <div class="tcgc_logintopzh">找回密码</div>
+                <div class="tcgc_item">
+                    <div class="tcgc_itempd"><img src="images/u106.png" alt=""/><input type="text" class="yourInput tcgcphone" value=""/><span class="tcgc_pop">请输入手机号码</span></div>
+                    <div class="tcgc_erromsg"><!--提示输入错误信息--></div>
+                    <img src="images/u144.png" class="tcgc_popimg tcgc_ok" alt=""/>
+                    <img src="images/u146.png" class="tcgc_popimg tcgc_error" alt=""/>
+                </div>
+                <div class="tcgc_item">
+                    <div class="tcgc_itempd"><img src="images/u106.png" alt=""/><input type="text" class="yourInput tcgc_code" value=""/>
+                        <span class="tcgc_borderx"></span>
+                        <input type="button" class="tcgc_codebtn tcgc_hover9" value="发送验证码" />
+                        <span class="tcgc_pop">请输入验证码</span></div>
+                    <div class="tcgc_erromsg"><!--提示输入错误信息--></div>
+                    <img src="images/u144.png" class="tcgc_popimg tcgc_ok" alt=""/>
+                    <img src="images/u146.png" class="tcgc_popimg tcgc_error" alt=""/>
+                </div>
+                <div class="tcgc_item">
+                    <div class="tcgc_itempd"><img src="images/u120.png" alt=""/><input type="password" class="yourInput tcgc_passw"/><span class="tcgc_pop">请输入6-8位的数字密码
+</span></div>
+                    <div class="tcgc_erromsg"><!--提示输入错误信息--></div>
+                    <img src="images/u144.png" class="tcgc_popimg tcgc_ok" alt=""/>
+                    <img src="images/u146.png" class="tcgc_popimg tcgc_error" alt=""/>
+                </div>
+                <div class="tcgc_item">
+                    <div class="tcgc_itempd"><img src="images/u120.png" alt=""/><input type="password" class="yourInput tcgc_passwo"/><span class="tcgc_pop">请再次输入密码</span></div>
+                    <div class="tcgc_erromsg"><!--提示输入错误信息--></div>
+                    <img src="images/u144.png" class="tcgc_popimg tcgc_ok" alt=""/>
+                    <img src="images/u146.png" class="tcgc_popimg tcgc_error" alt=""/>
+                </div>
+                <div class="tcgc_sub"><input type="submit" class="tcgc_subbtn" value="找回密码" onclick="tcgczhmm('#tcgc_zhmm .tcgcphone', '#tcgc_zhmm .tcgc_code', '#tcgc_zhmm .tcgc_passw', '#tcgc_zhmm .tcgc_passwo')"/></div>
+                <div class="tcgc_tool clear">
+                    <a href="javascript:;" class="fr tcgc_reg tcgc_hover9" onclick="tcgczreslogin()">记得密码，重新登录</a>
+                </div>
+            </div>
+        </div>
+  </body>
+</html>

@@ -1,0 +1,479 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>项目设置</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="description" content="你的描述内容"/> 
+    <meta name="keyword" content="关键字1,关键字2,---"/>
+    <link type="text/css" href="css/global.css" rel="Stylesheet" />
+    <link type="text/css" href="css/Garden.css" rel="Stylesheet" />
+    <link type="text/css" href="css/joker.css" rel="Stylesheet" />
+    <script type="text/javascript" src="javascript/modernizr.custom.46884.js"></script>
+    <script type="text/javascript" src="javascript/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" charset="gbk" src="javascript/ueditor.config.js"></script>
+    <script type="text/javascript" charset="gbk" src="javascript/ueditor.all.js"> </script>
+    <script type="text/javascript" charset="gbk" src="javascript/zh-cn.js"> </script>
+
+   
+
+    <script type="text/javascript" src="javascript/global.js"></script>
+    <script type="text/javascript" src="javascript/jquery.slicebox.js"></script>
+    <script type="text/javascript" src="javascript/jquery.gyArea.js"></script>
+    <script type="text/javascript" src="javascript/zxb_pcasun.js"></script>
+    <script type="text/javascript" src="javascript/joker.js"></script>
+    
+    <script type="text/javascript">
+        $(function(){
+             $(".yourInput").focusInput();
+             modebtn();
+
+             var thi;
+             $(".tcgc_set_lul li").click(function () {
+                 $(".tcgc_set_lul li a").removeClass("tcgc_set_select");
+                 $("a", this).addClass("tcgc_set_select");
+                 $(".tcgc_set_r").hide().eq((parseInt($(this).index())-1)).show();
+             });
+            $(".tcgc_abennext").click(function(){
+             thi=$(this);
+                switch(parseInt($(this).attr("_id"))){
+                    case 1:
+                        thi.parents(".tcgc_boxtabs").hide().next().show().find(".tcgc_set_r:eq(0)").show();
+                        $(".tcgc_xmsz_tab li").removeClass("tcgc_select").eq(1).addClass("tcgc_select");
+                        break;
+                    case 2:
+                        if($(this).html()=="下一步"){
+                        thi.parents(".tcgc_set_r").hide().next().show();
+                        }else{
+                        thi.parents(".tcgc_set_r").hide().prev().show();
+                        }
+                        $(".tcgc_set_lul a").each(function(){
+                            if($(this).html()==thi.attr("title")){
+                                $(this).parent().nextAll().find("a").removeClass("tcgc_set_select");
+                                $(this).parent().prevAll().find("a").removeClass("tcgc_set_select");
+                            $(this).addClass("tcgc_set_select");
+                            }
+                        });
+                        break;
+                    case 3:
+                        $(".tcgc_xmsz_tab li").removeClass("tcgc_select").eq(0).addClass("tcgc_select");
+                        thi.parents(".tcgc_boxtabs").hide().prev().show();
+                        break;
+                    case 4:
+                        $(".tcgc_xmsz_tab li").removeClass("tcgc_select").eq(2).addClass("tcgc_select");
+                        thi.parents(".tcgc_boxtabs").hide().next().show();
+                        break;
+                    case 5:
+                        $(".tcgc_xmsz_tab li").removeClass("tcgc_select").eq(1).addClass("tcgc_select");
+                        thi.parents(".tcgc_boxtabs").hide().prev().show();
+                        break;
+                }
+                
+            });
+            
+        });
+        
+    </script>
+  </head>
+  <body>
+    <div class="tcgc_header">
+        <div class="clear tcgc_header_box">
+            <div class="fl tcgc_header_boxfl"><a href="javascript:;" class="tcgc_logo"><img src="images/logo_photo.png" alt=""/></a><a href="javascript:;" class="tcgc_txt tcgc_hover3"><img src="images/set_notebook.png" alt=""/>发起人手册</a></div>
+            <div class="fr tcgc_pd">
+                <span class="tcgc_pdspan"></span>
+                <a href="javascript:;" class="tcgc_box tcgc_mrr tcgc_hover3 tcgc_newsobj" onclick="tcgcfb()"><img src="images/mine_icon_release.png" alt=""/>发布新项目</a>
+                <a href="javascript:;" class="tcgc_box tcgc_hover3 tcgc_loginregi" id="tcgc_headlogin" onclick="boxmask()">注册登录</a>
+                <span class="tcgc_hide">
+                    <span class="tcgc_mrr tcgc_hbox">
+                        <i class="tcgc_setlist_i"></i>
+                        <i class="tcgc_headimg"  id="tcgc_headimg"><img width="30" height="30"  src="images/1.jpg" alt=""/></i>
+                        <i class="tcgc_user">张启航</i>
+                        <span class="tcgc_setlist">
+                            
+                            <a class="tcgc_meobj tcgc_hover9" href="我的项目.html"><!--<img src="images/u46.png" alt="" width="21" height="20"/>--><span>我的项目</span>
+</a>
+                            <a class="tcgc_meset tcgc_hover9" href="设置.html"><!--<img src="images/u48.png" alt="" width="25" height="21"/>--><span>我的设置</span>
+</a>
+                            <a class="tcgc_meset tcgc_hover9" href="JavaScript:;" onclick="tcgcout()"><!--<img src="images/u48.png" alt="" width="25" height="21"/>--><span>退出</span>
+</a>
+                        </span>
+                    </span>
+                    <a href="javascript:;" class="tcgc_mrr tcgc_msg" title="未读消息10条"><i class="tcgc_yesmsg"><!--没消息去掉样式tcgc_yesmsg--></i><img width="20" height="26"  src="images/u30.png" alt=""/></a>
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="tcgc_content tcgc_bg">
+
+        <div class="tcgc_xmsz_banner"><img src="images/mine_bg.png" alt="" /></div>
+        <div class="tcgc_xmsz_contbox">
+            <div class="">
+            <div class="tcgc_width">
+            <div class="tcgc_xmsz_boxp">
+                <ul class="clear tcgc_xmsz_tab">
+                    <li class="tcgc_select"><div class="tcgc_xmsz_title">项目设置</div><div class="tcgc_mar"><span class="tcgc_fffboder"></span><span class="tcgc_yq">1</span></div></li>
+                    <li><div class="tcgc_xmsz_title">内容编辑</div><div class="tcgc_mar"><span class="tcgc_fffboder"></span><span class="tcgc_yq">2</span></div></li>
+                    <li><div class="tcgc_xmsz_title">回报进度</div><div class="tcgc_mar"><span class="tcgc_fffboder"></span><span class="tcgc_yq">3</span></div></li>
+                </ul>
+            </div>
+                </div>
+            <div class="tcgc_xmsz_fr">
+                <div class="tcgc_xmsz_bgff  tcgc_hide tcgc_shows tcgc_boxtabs">
+                   <!--start-->
+    					
+                        <div class="j_scimg">
+                        	<!--<div class="j_scimgn">
+                                <img alt="" src="images/u106.png">
+                            </div>-->
+                            <div class="j_scimg_c">
+                                <input name="" type="file"  class="j_scimg_c_input">
+                                <div class="j_scimg_ct"><a>上传图片封面</a></div>
+                                <p>建议图片大小: 1280*960px </p>
+                            </div>
+                        </div>
+						<table cellspacing="0" cellpadding="0" class="j_table1">
+                        	<tr>
+                            	<td class="j_table1_name">请输入项目名称</td>
+                            	<td><div class="position tcgc_divwidth100" id="inputlength1"><input name="" type="text" maxlength="30"  class="j_table1_input1 j_inputlengthb"><span class="j_table1_length j_inputlengths"><i>0</i> / 30</span></div></td>
+                            </tr>
+                        	<tr>
+                            	<td class="j_table1_name">项目金额</td>
+                            	<td class="j_table1_box"><span class="tcgc_divwidth50 tcgc_divwidth30span"><input name="" type="text" onkeyup="this.value=this.value.replace(/\D/g,'')"  onafterpaste="this.value=this.value.replace(/\D/g,'')"  class="j_table1_input2"></span> <span>&nbsp;元</span></td>
+                            </tr>
+                        	<tr>
+                            	<td class="j_table1_name">项目简介</td>
+                            	<td><div class="position tcgc_divwidth100" id="inputlength2"><textarea name="" cols="" rows="" maxlength="100" class="j_table1_input3 j_inputlengthb"></textarea><span class="j_table1_length2 j_inputlengths"><i>0</i> / 100</span></div></td>
+                            </tr>
+                        	<tr>
+                            	<td class="j_table1_name">真实姓名</td>
+                            	<td><div class="tcgc_divwidth50"><input name="" type="text" class="j_table1_input2"></div></td>
+                            </tr>
+                        	<tr>
+                            	<td class="j_table1_name">手机号码</td>
+                            	<td><div class="tcgc_divwidth50"><input name="" type="text" onblur="checkPhone($(this));" maxlength="11" class="j_table1_input2"></div></td>
+                            </tr>
+                        	<tr>
+                            	<td class="j_table1_name">发布地址</td>
+                            	<td class="position">
+                                	<div class="clear tcgc_divwidth50" style="width:60%;">
+                                                <div class="j_table1_input8 j_table1_input_xiala j_table1_input_add_sheng1 fl position">
+                                                	<span class="j_table1_input_add_sheng1_span">省</span>
+                                                    <div class="j_table1_input_add_box1"></div>
+                                                    <div class="BoxBack5"></div>
+                                                </div>
+                                                <div class="j_table1_input8 j_table1_input_xiala j_table1_input_add_shi1 fl position">
+                                                <span class="j_table1_input_add_shi1_span">市</span>
+                                                    <div class="j_table1_input_add_box2"></div>
+                                                    <div class="BoxBack5"></div>
+                                                </div>
+                                                <div class="j_table1_input8 j_table1_input_xiala j_table1_input_add_qu1 fr position">
+                                                <span class="j_table1_input_add_qu1_span">区</span>
+                                                    <div class="j_table1_input_add_box3"></div>
+                                                    <div class="BoxBack5"></div>
+                                                </div>
+                                            </div>
+                                    <div class="tcgc_divwidth50">
+                                            <div class="j_table1_input1 j_table1_input_xiala j_table1_input_add_jingquedizhi1 position"  >
+                                            	<span class="j_table1_input_add_jingquedizhi1_span">精确地址</span>
+                                            	<div class="j_table1_input_add_box4">
+                                                	<a>软件园3期22栋202室</a>
+                                                	<a>软件园3期22栋302室</a>
+                                                	<a>软件园3期22栋402室</a>
+                                                	<a>软件园3期22栋502室</a>
+                                                	<a>软件园3期22栋602室</a>
+                                                </div>
+                                                <div class="BoxBack5"></div>
+                                            </div>
+                                        </div>
+                                </td>
+                            </tr>
+                        	<tr>
+                            	<td class="j_table1_name">项目名称</td>
+                            	<td class="position">
+                                    <div class="tcgc_divwidth50">
+                                	<div class="j_table1_input2 j_table1_input_xiala j_table1_input_pinpaic"></div>
+                                    <div class="j_table1_input_pinpaib">
+                                    	<div>项目名称</div>
+                                    	<div>项目名称</div>
+                                    	<div>项目名称</div>
+                                    	<div>项目名称</div>
+                                    	<div>项目名称</div>
+                                    	<div>项目名称</div>
+                                    </div>
+                                        </div>
+                                    <div class="BoxBack"></div>
+                                </td>
+                            </tr>
+                        	<tr>
+                            	<td class="j_table1_name">推荐品牌</td>
+                            	<td>
+                                	<ul class="j_table1_input_tuijian clear">
+                                    	<li><a href="查看推荐品牌.html" title="">移联</a></li>
+                                    	<li><a href="查看推荐品牌.html" title="">百度</a></li>
+                                    	<li><a href="查看推荐品牌.html" title="">腾讯</a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="j_goxia_a"><a href="javascript:;" title="我的自述"  class="j_goxia_a_red tcgc_abennext" _id="1">下一步</a></div>
+                   <!--end-->
+                </div>
+
+                <div class="tcgc_xmsz_bgff tcgc_xmsz_clearpd tcgc_hides tcgc_boxtabs">
+                   <!--start-->
+
+                        <div class="tcgc_width clear tcgc_relative">
+                            <div class="tcgc_contpaddinglr">
+                            <div class="tcgc_set_l">
+                             <ul class="tcgc_set_lul">
+                               <li></li>
+                               <li><a href="javascript:;" class="tcgc_set_select" >我的自述</a></li>
+                               <li><a href="javascript:;" _id="">我的项目</a></li>
+                               <li><a href="javascript:;" _id="">商业信息表</a></li>
+                               <li><a href="javascript:;" _id="">我的团队</a></li>
+                               <li><a href="javascript:;" _id="">回报设置</a></li>
+                               <li><a href="javascript:;" _id="">为何众筹</a></li>
+                               <li></li>
+                           </ul>
+                            </div>
+                                
+                            <div class="tcgc_set_r ">
+                                 <div class="tcgc_set_width750">
+                            	<div class="j_zs_title">自述编辑</div>
+                                <div class="position bottom10" id="Div1"><span class="j_table1_input4_name">标题</span><input name="" type="text" maxlength="30"  class="j_table1_input4 j_inputlengthb"><span class="j_table1_length j_inputlengths"><i>0</i> / 30</span></div>
+                            	<script id="editor" type="text/plain" style="width:100%;height:300px;"></script>
+                                <script type="text/javascript">
+                                    //实例化编辑器
+                                    //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+                                    $(function () {
+
+                                        UE.getEditor('editor', {
+                                            toolbars: [
+                                                ["fontfamily", "bold", "italic", "underline", "justifyright", "justifycenter", "justifyleft", "insertvideo", "simpleupload"]
+                                            ]
+
+                                        });
+                                    });
+								</script>	
+                                     </div>
+                                <div class="j_goxia_a"><a href="javascript:;" title="项目设置" class="j_goxia_a_hui tcgc_abennext" _id="3">上一步</a><a href="javascript:;" title="我的项目" class="j_goxia_a_red tcgc_abennext" _id="2">下一步</a></div>
+                            </div>
+                            
+                                <div class="tcgc_set_r tcgc_hides">
+<div class="tcgc_set_width750">
+                            	<div class="j_zs_title">项目编辑</div>
+                                <div class="position bottom10" id="inputlength1"><span class="j_table1_input4_name">标题</span><input name="" type="text" maxlength="30"  class="j_table1_input4 j_inputlengthb"><span class="j_table1_length j_inputlengths"><i>0</i> / 30</span></div>
+                            	<script id="editor1" type="text/plain" style="width:100%;height:300px;"></script>
+                                <script type="text/javascript">
+									//实例化编辑器
+									//建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+                                    $(function () {
+
+                                        UE.getEditor('editor1', {
+                                            toolbars: [
+                                                ["fontfamily", "bold", "italic", "underline", "justifyright", "justifycenter", "justifyleft", "insertvideo", "simpleupload"]
+                                            ]
+
+                                        });
+                                    });
+								</script>
+                                     <div class="j_goxia_a"><a href="javascript:;" title="我的自述" class="j_goxia_a_hui tcgc_abennext" _id="2">上一步</a><a href="javascript:;" title="商业信息表" class="j_goxia_a_red tcgc_abennext" _id="2">下一步</a></div>
+                                </div>
+                                </div>	
+                                
+                                <div class="tcgc_set_r tcgc_hides">
+                                    <div class="">
+                                        <div class="j_zs_title">商业信息表编辑</div>
+                            	
+                                	<table cellspacing="0" cellpadding="0" class="j_table1 j_tablegy  j_tablegywidth">
+                                        <tr>
+                                            <td class="j_table1_name">店铺名称</td>
+                                            <td><div class="tcgc_divwidth50"><input name="" type="text" class="j_table1_input1"></div></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="j_table1_name">店铺地址</td>
+                                            <td class="position">
+                                                <div class="clear tcgc_divwidth50">
+                                                <div class="j_table1_input8 j_table1_input_xiala j_table1_input_add_sheng1 fl position">
+                                                	<span class="j_table1_input_add_sheng1_span">省</span>
+                                                    <div class="j_table1_input_add_box1"></div>
+                                                    <div class="BoxBack5"></div>
+                                                </div>
+                                                <div class="j_table1_input8 j_table1_input_xiala j_table1_input_add_shi1 fl position">
+                                                <span class="j_table1_input_add_shi1_span">市</span>
+                                                    <div class="j_table1_input_add_box2"></div>
+                                                    <div class="BoxBack5"></div>
+                                                </div>
+                                                <div class="j_table1_input8 j_table1_input_xiala j_table1_input_add_qu1 fr position">
+                                                <span class="j_table1_input_add_qu1_span">区</span>
+                                                    <div class="j_table1_input_add_box3"></div>
+                                                    <div class="BoxBack5"></div>
+                                                </div>
+                                            </div>
+                                                <div class="tcgc_divwidth50"> <input name="" type="text" class="j_table1_input1 j_table1_addinput"> </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="j_table1_name">环境描述</td>
+                                            <td><div class="position tcgc_divwidth50" id="inputlength2"><textarea name="" cols="" rows="" maxlength="1000" class="j_table1_input3 j_table1_input5 j_inputlengthb"></textarea><span class="j_table1_length2 j_inputlengths"><i>0</i> / 1000</span></div></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="j_table1_name">项目估值</td>
+                                            <td class="j_table1_box"><span class="tcgc_divwidth311 tcgc_divwidth30span"><input name="" type="text" onkeyup="this.value=this.value.replace(/\D/g,'')"  onafterpaste="this.value=this.value.replace(/\D/g,'')"  class="j_table1_input2"></span><span> &nbsp;万元</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="j_table1_name">退出节点</td>
+                                            <td class="j_table1_box"><span class="tcgc_divwidth311 tcgc_divwidth30span"><input name="" type="text" class="j_table1_input2"></span><span class=""> &nbsp;如：1年后可协商退出</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="j_table1_name">占地面积</td>
+                                            <td class="j_table1_box"><span class="tcgc_divwidth311 tcgc_divwidth30span"><input name="" type="text" onkeyup="this.value=this.value.replace(/\D/g,'')"  onafterpaste="this.value=this.value.replace(/\D/g,'')"  class="j_table1_input2"></span><span> &nbsp;平方米</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="j_table1_name j_table1_name">总建筑面积</td>
+                                            <td class="j_table1_box"><span class="tcgc_divwidth311 tcgc_divwidth30span"><input name="" type="text" onkeyup="this.value=this.value.replace(/\D/g,'')"  onafterpaste="this.value=this.value.replace(/\D/g,'')"  class="j_table1_input2"></span><span> &nbsp;平方米</span></td>
+                                        </tr>
+                                         <tr>
+                                            <td class="j_table1_name">项目特色</td>
+                                            <td><div class="position tcgc_divwidth50" id="inputlength3"><textarea name="" cols="" rows="" maxlength="1000" class="j_table1_input3 j_table1_input5 j_inputlengthb"></textarea><span class="j_table1_length2 j_inputlengths"><i>0</i> / 1000</span></div></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <div class="j_goxia_a tcgc_divwidth50"><a href="javascript:;" title="我的项目" class="j_goxia_a_hui tcgc_abennext" _id="2">上一步</a><a href="javascript:;" title="我的团队" class="j_goxia_a_red tcgc_abennext" _id="2">下一步</a></div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                        </div>
+                            </div>
+                                
+                                <div class="tcgc_set_r tcgc_hides">
+                                 <div class="tcgc_set_width750">
+                            	<div class="j_zs_title">团队描述</div>
+                                <div class="position bottom10" id="inputlength1"><span class="j_table1_input4_name">标题</span><input name="" type="text" maxlength="30"  class="j_table1_input4 j_inputlengthb"><span class="j_table1_length j_inputlengths"><i>0</i> / 30</span></div>
+                            	<script id="editor2" type="text/plain" style="width:100%;height:300px;"></script>
+                                <script type="text/javascript">
+									//实例化编辑器
+									//建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+                                    $(function () {
+
+                                        UE.getEditor('editor2', {
+                                            toolbars: [
+                                                ["fontfamily", "bold", "italic", "underline", "justifyright", "justifycenter", "justifyleft", "insertvideo", "simpleupload"]
+                                            ]
+
+                                        });
+                                    });
+								</script>	
+                                     </div>
+                                <div class="j_goxia_a"><a href="javascript:;" title="商业信息表" class="j_goxia_a_hui tcgc_abennext" _id="2">上一步</a><a href="javascript:;" title="回报设置" class="j_goxia_a_red tcgc_abennext" _id="2">下一步</a></div>
+                            </div>
+                                
+                                <div class="tcgc_set_r tcgc_hides">
+                                    <div class="tcgc_set_width750">
+                                        <div class="j_zs_title">回报描述</div>
+                            	<div class="tcgc_gao">
+                                	<table cellspacing="0" cellpadding="0" class="j_table1 j_tablegy j_tablegys">
+                                        <tr>
+                                            <td class="j_table1_name">回报标题</td>
+                                            <td><div class="tcgc_divwidth50"><div class="position" id="inputlength1"><input name="" type="text" maxlength="30"  class="j_table1_input1 j_inputlengthb"><span class="j_table1_length j_inputlengths"><i>0</i> / 30</span></div></div></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="j_table1_name">回报封面</td>
+                                            <td class="j_table1_box"><span class="j_img2 position overflow">上传封面图<input name="" type="file" readonly="true"></span> &nbsp;可选填&nbsp;&nbsp;&nbsp; (690*400px, JPG&nbsp;&nbsp; /&nbsp;&nbsp; GIF&nbsp;&nbsp; /&nbsp;&nbsp; PNG,&nbsp;&nbsp;RGB模式,&nbsp;&nbsp;200KB以内)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="j_table1_name">投资金额</td>
+                                            <td class="j_table1_box"><span class="tcgc_divwidth60 tcgc_divwidth30span"><input name="" type="text" onkeyup="this.value=this.value.replace(/\D/g,'')"  onafterpaste="this.value=this.value.replace(/\D/g,'')"  class="j_table1_input2"></span><span class="tcgc_divwidth10 tcgc_divwidth30span">&nbsp;&nbsp;元</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="j_table1_name">投资人数</td>
+                                            <td class="j_table1_box"><div class="tcgc_divwidth50"><span class="tcgc_divwidth60 tcgc_divwidth30span"><input name="" type="text" onkeyup="this.value=this.value.replace(/\D/g,'')"  onafterpaste="this.value=this.value.replace(/\D/g,'')"  class="j_table1_input2"></span> <span class="tcgc_divwidth10 tcgc_divwidth30span">&nbsp;&nbsp;人<i class="j_table1_i_fg">/</i></span><span class="tcgc_divwidth30 tcgc_divwidth30span"><span class="j_table1_input6">不限人数</span></span></div></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="j_table1_name">详细描述</td>
+                                            <td><div class="tcgc_divwidth50"><textarea name="" cols="" rows="" class="j_table1_input3 j_table1_input5 "></textarea></div></td>
+                                        </tr>
+                                    </table>
+                                    
+                                    </div>
+                                <div class="tcgc_cne"><span class=" j_tjhb" data-id="1"><a>+ 添加回报</a></span></div>
+                                    <div class="j_goxia_a"><a href="javascript:;" title="我的团队" class="j_goxia_a_hui tcgc_abennext" _id="2">上一步</a><a href="javascript:;" title="为何众筹" class="j_goxia_a_red tcgc_abennext" _id="2">下一步</a></div>
+                                        </div>
+                            </div>
+                                
+                                <div class="tcgc_set_r tcgc_hides">
+                                <div class="tcgc_set_width750">
+                            	<div class="j_zs_title">为何众筹</div>
+                                <div class="position bottom10" id="inputlength1"><span class="j_table1_input4_name">标题</span><input name="" type="text" maxlength="30"  class="j_table1_input4 j_inputlengthb"><span class="j_table1_length j_inputlengths"><i>0</i> / 30</span></div>
+                            	<script id="editor3" type="text/plain" style="width:100%;height:300px;"></script>
+                                <script type="text/javascript">
+									//实例化编辑器
+									//建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+                                    $(function () {
+
+                                        UE.getEditor('editor3', {
+                                            toolbars: [
+                                                ["fontfamily", "bold", "italic", "underline", "justifyright", "justifycenter", "justifyleft", "insertvideo", "simpleupload"]
+                                            ]
+
+                                        });
+                                    });
+								</script>	
+                                    </div>
+                                <div class="j_goxia_a"><a href="javascript:;" title="回报设置" class="j_goxia_a_hui tcgc_abennext"_id="2">上一步</a><a href="javascript:;" title="项目进度" class="j_goxia_a_red tcgc_abennext" _id="4">下一步</a></div>
+                            </div>
+                            </div>
+                            
+                            
+                        </div>
+                        
+                   <!--end-->
+                </div>
+                
+                <div class="tcgc_xmsz_fr tcgc_hides tcgc_boxtabs">
+                <div class="tcgc_xmsz_bgff">
+                   <!--start-->
+                    <div class="j_zs_title">项目进度</div>
+                    <div class="position bottom10" id="inputlength1"><span class="j_table1_input4_name">标题</span><input name="" type="text" maxlength="30"  class="j_table1_input4 j_inputlengthb"><span class="j_table1_length j_inputlengths"><i>0</i> / 30</span></div>
+                    <script id="editor4" type="text/plain" style="width:100%;height:300px;"></script>
+                    <script type="text/javascript">
+                        //实例化编辑器
+                        //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+                        $(function () {
+
+                            UE.getEditor('editor4', {
+                                toolbars: [
+                                    ["fontfamily", "bold", "italic", "underline", "justifyright", "justifycenter", "justifyleft", "insertvideo", "simpleupload"]
+                                ]
+
+                            });
+                        });
+								</script>	
+                    <div class="j_goxia_a"><a href="javascript:;" title="为何众筹" class="j_goxia_a_hui tcgc_abennext" _id="5">上一步</a><input name="" type="submit" class="j_goxia_a_red_gai" value="提交" id="j_goxia_a_red_tjc"><a class="j_goxia_a_yl" href="预览.html" title="预览界面">预览</a></div>
+                    <div class="j_goxia_a_red_tjb">项目已提交，审核需要1-2个工作日</div>
+                   <!--end-->
+                </div>
+            </div>
+            </div>
+            </div>
+
+
+
+
+        </div>
+
+    </div>
+    <div class="tcgc_footer">
+        <div class="tcgc_link">
+            <a href="javascript:;">关于我们</a> | 
+            <a href="javascript:;">同城共创</a> | 
+            <a href="javascript:;" onclick="returnhead()">返回顶部</a>
+        </div>
+        <div class="tcgc_beian">备案信息</div>
+    </div>
+  </body>
+</html>

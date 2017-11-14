@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>设置</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="description" content="你的描述内容"/> 
+    <meta name="keyword" content="关键字1,关键字2,---"/>
+    <link type="text/css" href="css/global.css" rel="Stylesheet" />
+    <link type="text/css" href="css/Garden.css" rel="Stylesheet" />
+    <script type="text/javascript" src="javascript/modernizr.custom.46884.js"></script>
+    <script type="text/javascript" src="javascript/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="javascript/global.js"></script>
+    <script type="text/javascript" src="javascript/jquery.slicebox.js"></script>
+    
+    <script type="text/javascript">
+        $(function(){
+             $(".yourInput").focusInput();
+             modebtn();
+             $(".tcgc_set_lul a").click(function () {
+                 $(".tcgc_set_lul a").removeClass("tcgc_set_select");
+                 $(this).addClass("tcgc_set_select");
+                 $(".tcgc_set_rbox").hide().eq($(this).attr("_id")).show();
+             });
+        });
+        
+    </script>
+  </head>
+  <body>
+    <div class="tcgc_header">
+        <div class="clear tcgc_header_box">
+            <div class="fl tcgc_header_boxfl"><a href="javascript:;" class="tcgc_logo"><img src="images/logo_photo.png" alt=""/></a><a href="javascript:;" class="tcgc_txt tcgc_hover3"><img src="images/set_notebook.png" alt=""/>发起人手册</a></div>
+            <div class="fr tcgc_pd">
+                <span class="tcgc_pdspan"></span>
+                <a href="javascript:;" class="tcgc_box tcgc_mrr tcgc_hover3 tcgc_newsobj" onclick="tcgcfb()"><img src="images/mine_icon_release.png" alt=""/>发布新项目</a>
+                <a href="javascript:;" class="tcgc_box tcgc_hover3 tcgc_loginregi" id="tcgc_headlogin" onclick="boxmask()">注册登录</a>
+                <span class="tcgc_hide">
+                    <span class="tcgc_mrr tcgc_hbox">
+                        <i class="tcgc_setlist_i"></i>
+                        <i class="tcgc_headimg"  id="tcgc_headimg"><img width="30" height="30"  src="images/1.jpg" alt=""/></i>
+                        <i class="tcgc_user">张启航</i>
+                        <span class="tcgc_setlist">
+                            
+                            <a class="tcgc_meobj tcgc_hover9" href="我的项目.html"><!--<img src="images/u46.png" alt="" width="21" height="20"/>--><span>我的项目</span>
+</a>
+                            <a class="tcgc_meset tcgc_hover9" href="设置.html"><!--<img src="images/u48.png" alt="" width="25" height="21"/>--><span>我的设置</span>
+</a>
+                            <a class="tcgc_meset tcgc_hover9" href="JavaScript:;" onclick="tcgcout()"><!--<img src="images/u48.png" alt="" width="25" height="21"/>--><span>退出</span>
+</a>
+                        </span>
+                    </span>
+                    <a href="javascript:;" class="tcgc_mrr tcgc_msg" title="未读消息10条"><i class="tcgc_yesmsg"><!--没消息去掉样式tcgc_yesmsg--></i><img width="20" height="26"  src="images/u30.png" alt=""/></a>
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="tcgc_content tcgc_bg tcgc_wdxx">
+        <div class="tcgc_xmsz_contbox">
+            <div class="tcgc_xmsz_fr">
+                <div class="tcgc_set_boxbg">
+                   <link type="text/css" href="css/joker.css" rel="Stylesheet" />
+				   <script type="text/javascript" src="javascript/jquery.gyArea.js"></script>
+                   <script type="text/javascript" src="javascript/zxb_pcasun.js"></script>
+                   <script type="text/javascript" src="javascript/joker.js"></script>
+                   <div class="tcgc_width clear tcgc_relative">
+                       <div class="tcgc_contpaddinglr">
+                       <div class="tcgc_set_l">
+                           <ul class="tcgc_set_lul">
+                               <li></li>
+                               <li><a href="javascript:;" class="tcgc_set_select" _id="0">个人资料</a></li>
+                               <li><a href="javascript:;" _id="1">地址管理</a></li>
+                               <li><a href="javascript:;" _id="2">密码管理</a></li>
+                               <li></li>
+                           </ul>
+                       </div>
+                       <div class="tcgc_set_r">
+                           <div class="tcgc_set_rbox">
+                               <div class="tcgc_set_rcent">
+                                   
+                                   
+                                   <table cellspacing="0" cellpadding="0" class="j_table1 tcgc_set_rcenttable">
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            <div class="tcgc_set_headup">
+                                               <span class="tcgc_set_headupspan"><img src="images/1.jpg" alt="" /><input type="file" /><i>点击修改头像</i></span>
+                                           </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="j_table1_name">昵称</td>
+                                        <td><input name="" type="text" maxlength="10" class="j_table1_input1"></td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="j_table1_name">性别</td>
+                                        <td class="position">
+                                            <div class="j_table1_input1 j_table1_input_xiala j_table1_input_pinpaic"></div>
+                                            <div class="j_table1_input_pinpaib j_table1_input_pinpaib2 j_table1_input_pinpaib3">
+                                                <div>男</div>
+                                                <div>女</div>
+                                            </div>
+                                            <div class="BoxBack"></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="j_table1_name">地址</td>
+                                        <td class="position">
+                                            <div class="clear">
+                                                <div class="j_table1_input8 j_table1_input_xiala j_table1_input_add_sheng1 fl position">
+                                                	<span class="j_table1_input_add_sheng1_span">省</span>
+                                                    <div class="j_table1_input_add_box1"></div>
+                                                    <div class="BoxBack5"></div>
+                                                </div>
+                                                <div class="j_table1_input8 j_table1_input_xiala j_table1_input_add_shi1 fl position">
+                                                <span class="j_table1_input_add_shi1_span">市</span>
+                                                    <div class="j_table1_input_add_box2"></div>
+                                                    <div class="BoxBack5"></div>
+                                                </div>
+                                                <div class="j_table1_input8 j_table1_input_xiala j_table1_input_add_qu1 fr position">
+                                                <span class="j_table1_input_add_qu1_span">区</span>
+                                                    <div class="j_table1_input_add_box3"></div>
+                                                    <div class="BoxBack5"></div>
+                                                </div>
+                                            </div>
+                                            <div class="j_table1_input1 j_table1_input_xiala j_table1_input_add_jingquedizhi1 position">
+                                            	<span class="j_table1_input_add_jingquedizhi1_span">精确地址</span>
+                                            	<div class="j_table1_input_add_box4">
+                                                	<a>软件园3期22栋202室</a>
+                                                	<a>软件园3期22栋302室</a>
+                                                	<a>软件园3期22栋402室</a>
+                                                	<a>软件园3期22栋502室</a>
+                                                	<a>软件园3期22栋602室</a>
+                                                </div>
+                                                <div class="BoxBack5"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="j_table1_name">个性签名</td>
+                                        <td><div class="position" id="inputlength2"><textarea name="" cols="" rows="" maxlength="40" class="j_table1_input3 j_inputlengthb"></textarea><span class="j_table1_length2 j_inputlengths"><i>0</i> / 40</span></div></td>
+                                    </tr>
+                                       <tr>
+                                           <td></td>
+                                           <td>
+                                               <div class="j_goxia_a"><input name="" type="submit" class="j_goxia_a_red_gai" value="保存"></div>
+                                           </td>
+                                       </tr>
+                                </table> 
+                        		
+                                
+                               </div>
+                           </div>
+                           <div class="tcgc_set_rbox tcgc_set_rhide">
+                               <div class="j_sz_dz_x">
+                               	   <table class="j_sz_dz_x_table" border="0" cellspacing="0" cellpadding="0">
+                                   	   <tr>
+                                       	   <th>收件人</th>
+                                       	   <th>联系方式</th>
+                                       	   <th>所在地区</th>
+                                       	   <th>具体地址</th>
+                                       	   <th>操作</th>
+                                       	   <th width="68">&nbsp;</th>
+                                       </tr>
+                                       <tr>
+                                       	   <td>吴彦祖</td>
+                                       	   <td>16125498452</td>
+                                       	   <td>厦门市思明区</td>
+                                       	   <td><span class="j_sz_dz_x_tablespan">福建省厦门市思明区观日路20之1201室</span></td>
+                                       	   <td><a class="j_sz_dz_x_table_xg" title="修改">修改</a> / <a class="j_sz_dz_x_table_sc" title="删除">删除</a></td>
+                                       	   <td><input name="" type="button" class="j_sz_dz_x_tablemoren" value="设置默认"></td>
+                                       </tr>
+                                       <tr>
+                                       	   <td>吴彦祖</td>
+                                       	   <td>16125498452</td>
+                                       	   <td>厦门市思明区</td>
+                                       	   <td><span class="j_sz_dz_x_tablespan">福建省厦门市思明区观日路20之1201室</span></td>
+                                       	   <td><a class="j_sz_dz_x_table_xg" title="修改">修改</a> / <a class="j_sz_dz_x_table_sc" title="删除">删除</a></td>
+                                       	   <td>&nbsp;</td>
+                                       </tr>
+                                       <tr>
+                                       	   <td>吴彦祖</td>
+                                       	   <td>16125498452</td>
+                                       	   <td>厦门市思明区</td>
+                                       	   <td><span class="j_sz_dz_x_tablespan">福建省厦门市思明区观日路20之1201室</span></td>
+                                       	   <td><a class="j_sz_dz_x_table_xg" title="修改">修改</a> / <a class="j_sz_dz_x_table_sc" title="删除">删除</a></td>
+                                       	   <td><input name="" type="button" class="j_sz_dz_x_tablemoren" value="设置默认"></td>
+                                       </tr>
+                                   </table>
+                                   <div class="j_tjhb1 tcgc_j_tjhb1"><a>+ 添加地址</a></div>
+                                   <div class="BoxBack3"></div>
+                                   <div class="j_sz_dz_x_table_sc_pd j_sz_dz_x_table_sc_pd1">
+                                        <p>确定要删除此地址？</p>
+                                        <p><span class="j_sz_dz_x_table_sc_pdy j_sz_dz_x_table_sc_pdy1">确定</span><span class="j_sz_dz_x_table_sc_pdn j_sz_dz_x_table_sc_pdn1">取消</span></p>
+                                   </div>
+                               </div>
+                               <div class="j_sz_dz_s" style="display:none;">
+                                   <table cellspacing="0" cellpadding="0" class="j_table1" style="max-width:500px; margin:0 auto; margin-top:50px;">
+                                        <tr>
+                                            <td class="j_table1_name">联系人</td>
+                                            <td><input name="" type="text" class="j_table1_input1"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="j_table1_name">联系方式</td>
+                                            <td><input name="" type="text" class="j_table1_input1"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="j_table1_name">所在地区</td>
+                                            <td class="position">
+                                                <div class="clear">
+                                                    <div class="j_table1_input8 j_table1_input_xiala j_table1_input_add_sheng1 fl position">
+                                                        <span class="j_table1_input_add_sheng2_span">省</span>
+                                                        <div class="j_table1_input_add_box11"></div>
+                                                        <div class="BoxBack5"></div>
+                                                    </div>
+                                                    <div class="j_table1_input8 j_table1_input_xiala j_table1_input_add_shi1 fl position">
+                                                    <span class="j_table1_input_add_shi2_span">市</span>
+                                                        <div class="j_table1_input_add_box22"></div>
+                                                        <div class="BoxBack5"></div>
+                                                    </div>
+                                                    <div class="j_table1_input8 j_table1_input_xiala j_table1_input_add_qu1 fr position">
+                                                    <span class="j_table1_input_add_qu2_span">区</span>
+                                                        <div class="j_table1_input_add_box33"></div>
+                                                        <div class="BoxBack5"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="j_table1_input1 j_table1_input_xiala j_table1_input_add_jingquedizhi1 position">
+                                                    <span class="j_table1_input_add_jingquedizhi2_span">精确地址</span>
+                                                    <div class="j_table1_input_add_box44">
+                                                        <a>软件园3期22栋202室</a>
+                                                        <a>软件园3期22栋302室</a>
+                                                        <a>软件园3期22栋402室</a>
+                                                        <a>软件园3期22栋502室</a>
+                                                        <a>软件园3期22栋602室</a>
+                                                    </div>
+                                                    <div class="BoxBack5"></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <td class="j_table1_name">个性签名</td>
+                                            <td><textarea name="" cols="" rows="" maxlength="40" class="j_table1_input3 j_inputlengthb"></textarea></td>
+                                        </tr>
+                                        
+                                    <tr>
+                                        <td class="j_table1_name">&nbsp;</td>
+                                        <td><div class="jzf_bb_yue jzf_bb_yue2"><a class="jzf_bb_yuea" data-id="n">设为默认</a></div></td>
+                                    </tr>
+                                       <tr>
+                                           <td></td>
+                                           <td>
+                                               <div class="j_goxia_a tcgc_j_goxia_a"><input name="" type="button" class="j_goxia_a_hui_gai j_sz_dz_x_fh" value="取消"><input name="" type="submit" class="j_goxia_a_red_gai j_sz_dz_x_fh" value="保存"></div>
+                                           </td>
+                                       </tr>
+                                    </table> 
+                                    
+                               </div>
+                           </div>
+                           <div class="tcgc_set_rbox tcgc_set_rhide">
+                               <table cellspacing="0" cellpadding="0" class="j_table1 j_tablegy" style="max-width:500px; margin:0 auto; margin-top:50px;">
+                                    <tr>
+                                        <td class="j_table1_name">手机号</td>
+                                        <td><input name="" type="text" onblur="checkPhone($(this));" maxlength="11" class="j_table1_input1"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="j_table1_name">请输入项目名称</td>
+                                        <td><div class="position"><input name="" type="text" maxlength="30"  class="j_table1_input1"><input name="" type="button" class="j_table1_input_yz_gai" value="发送验证码"></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="j_table1_name">新密码</td>
+                                        <td><input name="" type="password" class="j_table1_input1"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="j_table1_name">再次输入</td>
+                                        <td><input name="" type="password" class="j_table1_input1"></td>
+                                    </tr>
+                                   <tr>
+                                       <td></td>
+                                       <td>
+                                           <div class="j_goxia_a"><input name="" type="submit" class="j_goxia_a_red_gai" value="保存"></div>
+                                       </td>
+                                   </tr>
+                                </table> 
+                        		
+                           </div>
+                       </div>
+                       </div>
+                   </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="tcgc_footer">
+        <div class="tcgc_link">
+            <a href="javascript:;">关于我们</a> | 
+            <a href="javascript:;">同城共创</a> | 
+            <a href="javascript:;" onclick="returnhead()">返回顶部</a>
+        </div>
+        <div class="tcgc_beian">备案信息</div>
+    </div>
+  </body>
+</html>

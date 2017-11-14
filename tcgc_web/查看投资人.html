@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>查看投资人</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="description" content="你的描述内容"/> 
+    <meta name="keyword" content="关键字1,关键字2"/>
+    <link type="text/css" href="css/global.css" rel="Stylesheet" />
+    <link type="text/css" href="css/Garden.css" rel="Stylesheet" />
+    <link type="text/css" href="css/joker.css" rel="Stylesheet" />
+    <script type="text/javascript" src="javascript/modernizr.custom.46884.js"></script>
+    <script type="text/javascript" src="javascript/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="javascript/global.js"></script>
+    <script type="text/javascript" src="javascript/jquery.slicebox.js"></script>
+    <script type="text/javascript" src="javascript/joker.js"></script>
+    
+    <script type="text/javascript">
+        $(function(){
+            $(".yourInput").focusInput();
+            $(".tcgc_cktzr_inputche").click(function () {
+                if ($(this).is(":checked")) {
+                    $(".tcgc_cktzr_inputcheitem").attr("checked", "checked");
+                } else {
+                    $(".tcgc_cktzr_inputcheitem").removeAttr("checked");
+                }
+                
+            });
+
+            $(".tcgc_cktzr_tab tr:odd").find("td").addClass("tcgc_td");
+            //全选
+            $(".tcgc_checkboxall").click(function () {
+
+                 if ($(this).hasClass("tcgc_chebox_span_select")) {
+                     $(".tcgc_chebox_spanbtn").removeClass("tcgc_chebox_span_select");
+                     $(this).removeClass("tcgc_chebox_span_select")
+                 } else {
+                     $(".tcgc_chebox_spanbtn").addClass("tcgc_chebox_span_select");
+                     $(this).addClass("tcgc_chebox_span_select")
+                 }
+             });
+            //box
+            $(".tcgc_chebox_spanbtn").live("click", function () {
+                 if ($(this).hasClass("tcgc_chebox_span_select")) {
+                     $(this).removeClass("tcgc_chebox_span_select")
+                 } else {
+                     $(this).addClass("tcgc_chebox_span_select")
+                 }
+
+             });
+            $.popok({//导出
+                id: "tcgcdc",
+                out: function () { },
+                ok: function () {
+                   
+
+                }
+            });
+
+        });
+
+    </script>
+  </head>
+  <body>
+    <div class="tcgc_header">
+        <div class="clear tcgc_header_box">
+            <div class="fl tcgc_header_boxfl"><a href="javascript:;" class="tcgc_logo"><img src="images/logo_photo.png" alt=""/></a><a href="javascript:;" class="tcgc_txt tcgc_hover3"><img src="images/set_notebook.png" alt=""/>发起人手册</a></div>
+            <div class="fr tcgc_pd">
+                <span class="tcgc_pdspan"></span>
+                <a href="javascript:;" class="tcgc_box tcgc_mrr tcgc_hover3 tcgc_newsobj" onclick="tcgcfb()"><img src="images/mine_icon_release.png" alt=""/>发布新项目</a>
+                <a href="javascript:;" class="tcgc_box tcgc_hover3 tcgc_loginregi" id="tcgc_headlogin" onclick="boxmask()">注册登录</a>
+                <span class="tcgc_hide">
+                    <span class="tcgc_mrr tcgc_hbox">
+                        <i class="tcgc_setlist_i"></i>
+                        <i class="tcgc_headimg"  id="tcgc_headimg"><img width="30" height="30"  src="images/1.jpg" alt=""/></i>
+                        <i class="tcgc_user">张启航</i>
+                        <span class="tcgc_setlist">
+                            
+                            <a class="tcgc_meobj tcgc_hover9" href="我的项目.html"><!--<img src="images/u46.png" alt="" width="21" height="20"/>--><span>我的项目</span>
+</a>
+                            <a class="tcgc_meset tcgc_hover9" href="设置.html"><!--<img src="images/u48.png" alt="" width="25" height="21"/>--><span>我的设置</span>
+</a>
+                            <a class="tcgc_meset tcgc_hover9" href="JavaScript:;" onclick="tcgcout()"><!--<img src="images/u48.png" alt="" width="25" height="21"/>--><span>退出</span>
+</a>
+                        </span>
+                    </span>
+                    <a href="javascript:;" class="tcgc_mrr tcgc_msg" title="未读消息10条"><i class="tcgc_yesmsg"><!--没消息去掉样式tcgc_yesmsg--></i><img width="20" height="26"  src="images/u30.png" alt=""/></a>
+                </span>
+            </div>
+        </div>
+      
+    </div>
+        <div class="tcgc_border"></div>
+    <div class="tcgc_content">  
+        <div class="tcgc_cktzr">
+            <div class="tcgc_cktzr_title">共xx为投资人</div>
+            <div class="tcgc_cktzr_sx clear">
+                <div class="fl tcgc_cktzr_sxboxs">
+                   <div class="j_table1_input1 j_table1_input_xiala j_table1_input_pinpaic">全部</div>
+                                            <div class="j_table1_input_pinpaib j_table1_input_pinpaib2 j_table1_input_pinpaib3">
+                                                <div>全部</div>
+                                                <div>回报1</div>
+                                                <div>回报2</div>
+                                                <div>回报3</div>
+                                                <div>回报4</div>
+                                            </div>
+                                            <div class="BoxBack"></div>
+                </div>
+                <input type="button" value="导出" class="fr tcgc_daochu"onclick="tcgcdc()" id="tcgcdc" />
+            </div>
+            <div class="tcgc_cktzr_tabbox">
+                <table cellpadding="0" cellspacing="1" class="tcgc_cktzr_tab">
+                    <tr>
+                        <th align="left" width="20" class="tcgc_cktzr_che"><span class="tcgc_chebox_span tcgc_checkboxall"></span></th>
+                        <th align="center" width="30"></th>
+                        <th align="center" width="200">昵称</th>
+                        <th align="center" width="200">联系方式</th>
+                        <th align="center" width="300">地址</th>
+                        <th align="center" width="300">回报选择</th>
+                        <th align="center" width="100">参与时间</th>
+                    </tr>
+                    <tr>
+                        <td align="left" class="tcgc_cktzr_che"><span class="tcgc_chebox_span tcgc_chebox_spanbtn"></span></td>
+                        <td align="center">1</td>
+                        <td align="center">君</td>
+                        <td align="center">1010101</td>
+                        <td align="center">厦大</td>
+                        <td align="center">回报</td>
+                        <td align="center">2016年9月30日08:51:10</td>
+                    </tr>
+                    <tr>
+                        <td align="left" class="tcgc_cktzr_che"><span class="tcgc_chebox_span tcgc_chebox_spanbtn"></span></td>
+                        <td align="center">1</td>
+                        <td align="center">君</td>
+                        <td align="center">1010101</td>
+                        <td align="center">厦大</td>
+                        <td align="center">回报</td>
+                        <td align="center">2016年9月30日08:51:10</td>
+                    </tr>
+                    <tr>
+                        <td align="left" class="tcgc_cktzr_che"><span class="tcgc_chebox_span tcgc_chebox_spanbtn"></span></td>
+                        <td align="center">1</td>
+                        <td align="center">君</td>
+                        <td align="center">1010101</td>
+                        <td align="center">厦大</td>
+                        <td align="center">回报</td>
+                        <td align="center">2016年9月30日08:51:10</td>
+                    </tr>
+                    <tr>
+                        <td align="left" class="tcgc_cktzr_che"><span class="tcgc_chebox_span tcgc_chebox_spanbtn"></span></td>
+                        <td align="center">1</td>
+                        <td align="center">君</td>
+                        <td align="center">1010101</td>
+                        <td align="center">厦大</td>
+                        <td align="center">回报</td>
+                        <td align="center">2016年9月30日08:51:10</td>
+                    </tr>
+                    <tr>
+                        <td align="left" class="tcgc_cktzr_che"><span class="tcgc_chebox_span tcgc_chebox_spanbtn"></span></td>
+                        <td align="center">1</td>
+                        <td align="center">君</td>
+                        <td align="center">1010101</td>
+                        <td align="center">厦大</td>
+                        <td align="center">回报</td>
+                        <td align="center">2016年9月30日08:51:10</td>
+                    </tr>
+                    <tr>
+                        <td align="left" class="tcgc_cktzr_che"><span class="tcgc_chebox_span tcgc_chebox_spanbtn"></span></td>
+                        <td align="center">1</td>
+                        <td align="center">君</td>
+                        <td align="center">1010101</td>
+                        <td align="center">厦大</td>
+                        <td align="center">回报</td>
+                        <td align="center">2016年9月30日08:51:10</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="tcgc_footer">
+        <div class="tcgc_link">
+            <a href="javascript:;">关于我们</a> | 
+            <a href="javascript:;">同城共创</a> | 
+            <a href="javascript:;" onclick="returnhead()">返回顶部</a>
+        </div>
+        <div class="tcgc_beian">备案信息</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,221 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>我的消息</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="description" content="你的描述内容"/> 
+    <meta name="keyword" content="关键字1,关键字2,---"/>
+    <link type="text/css" href="css/global.css" rel="Stylesheet" />
+    <link type="text/css" href="css/Garden.css" rel="Stylesheet" />
+    <script type="text/javascript" src="javascript/modernizr.custom.46884.js"></script>
+    <script type="text/javascript" src="javascript/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="javascript/global.js"></script>
+    <script type="text/javascript" src="javascript/jquery.slicebox.js"></script>
+    
+    <script type="text/javascript">
+        $(function(){
+             $(".yourInput").focusInput();
+             modebtn();
+
+             $(".tcgc_btnboxev").click(function () {
+                 $(".tcgc_btnboxev").removeClass("tcgc_btnbox_select");
+                 $(this).addClass("tcgc_btnbox_select");
+             });
+             $(".tcgc_checkboxall").click(function () {
+
+                 if ($(this).hasClass("tcgc_chebox_span_select")) {
+                     $(".tcgc_wdxxul .tcgc_chebox_span").removeClass("tcgc_chebox_span_select");
+                     $(this).removeClass("tcgc_chebox_span_select")
+                 } else {
+                     $(".tcgc_wdxxul .tcgc_chebox_span").addClass("tcgc_chebox_span_select");
+                     $(this).addClass("tcgc_chebox_span_select")
+                 }
+             });
+             $(".tcgc_wdxxul .tcgc_chebox_span").live("click", function () {
+                 if ($(this).hasClass("tcgc_chebox_span_select")) {
+                     $(this).removeClass("tcgc_chebox_span_select")
+                 } else {
+                     $(this).addClass("tcgc_chebox_span_select")
+                 }
+
+             });
+
+             $.popok({//标记为已读
+                 id: "tcgcbtnbox_yd",
+                 out: function () { },
+                 ok: function () {
+                     
+
+                 }
+             });
+             $.popok({//删除
+                 id: "tcgc_btnbox_del",
+                 out: function () { },
+                 ok: function () {
+                    
+
+                 }
+             });
+
+        });
+        function tcgcbtnbox_yd() {
+
+            if ($(".tcgc_wdxxul .tcgc_chebox_span_select").length > 0) {
+                $(".tcgc_wdxxul .tcgc_chebox_span_select").each(function () {
+                    $(this).parent().find(".tcgc_wdxx_emailimg").addClass("tcgc_wdxx_emailimgno");
+                });
+            } else {
+               
+                $.pop({
+                    bs: $("#tcgcbtnbox_yd"),
+                    title: "",
+                    width: "300",
+                    conttxt: "请先选取一条数据",
+                    oktxt: "确认",
+                    canceltxt: "取消"
+                });
+            }
+        }
+        function tcgcbtnbox_wd() {
+            $(".tcgc_wdxxul .tcgc_wdxx_emailimgno").parent().hide();
+        }
+        function tcgcbtnboxdel() {
+            if ($(".tcgc_wdxxul .tcgc_chebox_span_select").length > 0) {
+               
+                $(".tcgc_wdxxul .tcgc_chebox_span_select").each(function () {
+                    //将选中的数据删除
+                });
+            } else {
+
+                $.pop({
+                    bs: $("#tcgc_btnbox_del"),
+                    title: "",
+                    width: "300",
+                    conttxt: "请先选取一条数据",
+                    oktxt: "确认",
+                    canceltxt: "取消"
+                });
+            }
+        }
+    </script>
+  </head>
+  <body>
+    <div class="tcgc_header">
+        <div class="clear tcgc_header_box">
+            <div class="fl tcgc_header_boxfl"><a href="javascript:;" class="tcgc_logo"><img src="images/logo_photo.png" alt=""/></a><a href="javascript:;" class="tcgc_txt tcgc_hover3"><img src="images/set_notebook.png" alt=""/>发起人手册</a></div>
+            <div class="fr tcgc_pd">
+                <span class="tcgc_pdspan"></span>
+                <a href="javascript:;" class="tcgc_box tcgc_mrr tcgc_hover3 tcgc_newsobj" onclick="tcgcfb()"><img src="images/mine_icon_release.png" alt=""/>发布新项目</a>
+                <a href="javascript:;" class="tcgc_box tcgc_hover3 tcgc_loginregi" id="tcgc_headlogin" onclick="boxmask()">注册登录</a>
+                <span class="tcgc_hide">
+                    <span class="tcgc_mrr tcgc_hbox">
+                        <i class="tcgc_setlist_i"></i>
+                        <i class="tcgc_headimg"  id="tcgc_headimg"><img width="30" height="30"  src="images/1.jpg" alt=""/></i>
+                        <i class="tcgc_user">张启航</i>
+                        <span class="tcgc_setlist">
+                            
+                            <a class="tcgc_meobj tcgc_hover9" href="我的项目.html"><!--<img src="images/u46.png" alt="" width="21" height="20"/>--><span>我的项目</span>
+</a>
+                            <a class="tcgc_meset tcgc_hover9" href="设置.html"><!--<img src="images/u48.png" alt="" width="25" height="21"/>--><span>我的设置</span>
+</a>
+                            <a class="tcgc_meset tcgc_hover9" href="JavaScript:;" onclick="tcgcout()"><!--<img src="images/u48.png" alt="" width="25" height="21"/>--><span>退出</span>
+</a>
+                        </span>
+                    </span>
+                    <a href="javascript:;" class="tcgc_mrr tcgc_msg" title="未读消息10条"><i class="tcgc_yesmsg"><!--没消息去掉样式tcgc_yesmsg--></i><img width="20" height="26"  src="images/u30.png" alt=""/></a>
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="tcgc_content tcgc_bg tcgc_wdxx">
+        <div class="tcgc_xmsz_contbox">
+            <div class="tcgc_xmsz_fr">
+                <div class="tcgc_xmsz_bgff">
+                   <div class="tcgc_xmsz_midle">
+                       <span class="tcgc_chebox"><span class="tcgc_chebox_span tcgc_checkboxall"></span><i class="tcgc_cheboxtxt">全选</i></span>
+                       <span class="tcgc_btnbox tcgc_btnboxev" onclick="tcgcbtnbox_yd()" id="tcgcbtnbox_yd">标记为已读</span>
+                       <span class="tcgc_btnbox tcgc_btnboxev" onclick="tcgcbtnbox_wd()" id="tcgcbtnbox_wd">只显示未读</span>
+                       <span class="tcgc_btnbox" id="tcgc_btnbox_del" onclick="tcgcbtnboxdel()">删除</span>
+                   </div>
+                    <div class="tcgc_border tcgc_border_marign"></div>
+                    <ul class="tcgc_wdxxul">
+                        <li>
+                            <span class="tcgc_chebox_span"></span><span class="tcgc_wdxx_emailimg"></span>
+                            <a href="javascript:;"><span class="tcgc_wdxx_contbox"><i class="tcgc_wdxx_time">2016.02.02 18:12</i>
+                                <span class="tcgc_wdxx_cont">
+                               包含的功能更标记未已读，只显示未读，删除，这些功能需要在选择了消息才能做操作，否则需要提示，请选择相关消息；
+                                </span>
+                            </span></a>
+                        </li>
+                        <li>
+                            <span class="tcgc_chebox_span"></span><span class="tcgc_wdxx_emailimg"></span>
+                            <a href="javascript:;"><span class="tcgc_wdxx_contbox"><i class="tcgc_wdxx_time">2016.02.02 18:12</i>
+                                <span class="tcgc_wdxx_cont">
+                               包含的功能更标记未已读，只显示未读，删除，这些功能需要在选择了消息才能做操作，否则需要提示，请选择相关消息；
+                                </span>
+                            </span></a>
+                        </li>
+                        <li>
+                            <span class="tcgc_chebox_span"></span><span class="tcgc_wdxx_emailimg"></span>
+                            <a href="javascript:;"><span class="tcgc_wdxx_contbox"><i class="tcgc_wdxx_time">2016.02.02 18:12</i>
+                                <span class="tcgc_wdxx_cont">
+                               包含的功能更标记未已读，只显示未读，删除，这些功能需要在选择了消息才能做操作，否则需要提示，请选择相关消息；
+                                </span>
+                            </span></a>
+                        </li>
+                        <li>
+                            <span class="tcgc_chebox_span"></span><span class="tcgc_wdxx_emailimg"></span>
+                            <a href="javascript:;"><span class="tcgc_wdxx_contbox"><i class="tcgc_wdxx_time">2016.02.02 18:12</i>
+                                <span class="tcgc_wdxx_cont">
+                               包含的功能更标记未已读，只显示未读，删除，这些功能需要在选择了消息才能做操作，否则需要提示，请选择相关消息；
+                                </span>
+                            </span></a>
+                        </li>
+                        <li>
+                            <span class="tcgc_chebox_span"></span><span class="tcgc_wdxx_emailimg"></span>
+                            <a href="javascript:;"><span class="tcgc_wdxx_contbox"><i class="tcgc_wdxx_time">2016.02.02 18:12</i>
+                                <span class="tcgc_wdxx_cont">
+                               包含的功能更标记未已读，只显示未读，删除，这些功能需要在选择了消息才能做操作，否则需要提示，请选择相关消息；
+                                </span>
+                            </span></a>
+                        </li>
+                        <li>
+                            <span class="tcgc_chebox_span"></span><span class="tcgc_wdxx_emailimg tcgc_wdxx_emailimgno"></span>
+                            <a href="javascript:;"><span class="tcgc_wdxx_contbox"><i class="tcgc_wdxx_time">2016.02.02 18:12</i>
+                                <span class="tcgc_wdxx_cont">
+                               包含的功能更标记未已读，只显示未读，删除，这些功能需要在选择了消息才能做操作，否则需要提示，请选择相关消息；
+                                </span>
+                            </span></a>
+                        </li>
+                    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="tcgc_footer">
+        <div class="tcgc_link">
+            <a href="javascript:;">关于我们</a> | 
+            <a href="javascript:;">同城共创</a> | 
+            <a href="javascript:;" onclick="returnhead()">返回顶部</a>
+        </div>
+        <div class="tcgc_beian">备案信息</div>
+    </div>
+  </body>
+</html>

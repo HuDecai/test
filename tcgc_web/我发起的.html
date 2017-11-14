@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>我发起的</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="description" content="你的描述内容"/> 
+    <meta name="keyword" content="关键字1,关键字2,---"/>
+    <link type="text/css" href="css/global.css" rel="Stylesheet" />
+    <link type="text/css" href="css/Garden.css" rel="Stylesheet" />
+    <script type="text/javascript" src="javascript/modernizr.custom.46884.js"></script>
+    <script type="text/javascript" src="javascript/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="javascript/global.js"></script>
+    <script type="text/javascript" src="javascript/jquery.slicebox.js"></script>
+    
+    <script type="text/javascript">
+        $(function(){
+             $(".yourInput").focusInput();
+             modebtn();
+
+             
+             $.popok({//删除确认
+                 id: "sc",//这里要填写比如：如果是删除弹出，这里写点击删除按钮id：sc
+                 out: function () {},
+                 ok: function () {
+                     //console.log("删除确认:" + $(this).html());
+                 }
+             });
+             $.popok({//查看确认
+                 id: "ck",
+                 out: function () { },
+                 ok: function () {
+                     //console.log("查看确认:" + $(this).html());
+                 }
+             });
+             $.popok({//确认发布
+                 id: "qrfb",
+                 out: function () {
+                     //不，直接发布
+
+                 },
+                 ok: function () {
+                     //console.log("确认发布:" + $(this).html());
+                     var str = '<table cellpadding="0" cellspacing="0" border="0" class="poptab">'+
+                        '<tr>'+
+                            '<td align="right" class="leftbox">群名称</td>'+
+                            '<td>'+
+                                '<div class="tcgc_item">'+
+                                    '<div class="tcgc_itempd"><input type="text" class="yourInput inputbox" value=""/><span class="tcgc_pop">请输入群名称</span></div>'+
+                                    '<div class="tcgc_erromsg"><!--提示输入错误信息--></div>'+
+                                '</div>'+
+                            '</td>'+
+                        '</tr>'+
+                        '<tr>'+
+                            '<td align="right" class="leftbox">群主</td>'+
+                            '<td>'+
+                                '<div class="tcgc_item">'+
+                                    '<div class="tcgc_itempd"><input type="text" class="yourInput inputbox" value=""/><span class="tcgc_pop">请输入群名称</span></div>'+
+                                    '<div class="tcgc_erromsg"><!--提示输入错误信息--></div>'+
+                                '</div>'+
+                            '</td>'+
+                        '</tr>'+
+                        '<tr>'+
+                            '<td align="right" class="leftbox">管理员</td>'+
+                            '<td>'+
+                                '<div class="tcgc_item">'+
+                                    '<div class="tcgc_itempd"><input type="text" class="yourInput inputbox" value=""/><span class="tcgc_pop">请输入管理员昵称和手机号码</span></div>'+
+                                    '<div class="tcgc_erromsg"><!--提示输入错误信息--></div>'+
+                                '</div>'+
+                            '</td>'+
+                        '</tr>'+
+                    '</table>';
+                     $.pop({
+                         bs: $("#popsub_qrfb"),
+                         title: "创建群组",
+                         width: "380",
+                         conttxt: str,
+                         oktxt: "确认",
+                         canceltxt: "取消",
+                         cancelhid:false
+                     });
+                     $('<span class="popclosex"><i></i>x</span>').appendTo($("#popsub_popsub_qrfb").parents(".tcgc_maskpopbox"));
+                     $("#popsub_popsub_qrfb").parents(".tcgc_maskpoppd").find(".poptitle").css({ "border-bottom": "1px solid #d8d8d8", "padding": "20px 0px 10px 0px" });
+                     $(".yourInput").focusInput();
+
+                 }
+             });
+
+             $.popok({//创建群确认
+                 id: "popsub_qrfb",
+                 out: function () { },
+                 ok: function () {
+                     //console.log("创建群确认:" + $(this).html());
+
+                 }
+             });
+             $.popok({//申请中止
+                 id: "sqzz",
+                 out: function () { },
+                 ok: function () {
+                     //console.log("申请中止确认:" + $(this).html());
+
+                 }
+             });
+        });
+        function tcgcdel(op) {//删除
+            //bs：#xx,一定要写但不能重复，可以随便写
+            $.pop({
+                bs: $("#sc"),
+                title: "",
+                width: "500",
+                conttxt: "<div style='height:130px;line-height:130px;font-size:24px;'>删除后将不可恢复，确认删除？</div>",
+                oktxt: "确认",
+                canceltxt: "取消"
+            });
+        }
+        function tcgcdeldss(op) {
+            $.pop({
+                bs: $("#ck"),
+                title: "提示",
+                width: "500",
+                conttxt: "<div style='height:130px;line-height:130px;font-size:24px;'>提示内容</div>",
+                oktxt: "确认",
+                canceltxt: "取消"
+            });
+        }
+        function tcgc_queren() {
+            var str='<div class="tcgc_paddingtb"><img src="images/chuangjianqun.png" alt="" /></div><div class="tcgc_paddingtb">是否要创建群</div>';
+            $.pop({
+                bs: $("#qrfb"),
+                title: "",
+                width: "500",
+                conttxt: str,
+                oktxt: "发布并创建",
+                canceltxt: "不，直接发布"
+            });
+            $('<span class="popclosex"><i></i>x</span>').appendTo($("#popsub_qrfb").parents(".tcgc_maskpopbox"));
+        }
+        function tcgcsqzz() {
+            $.pop({
+                bs: $("#sqzz"),
+                title: "",
+                width: "500",
+                conttxt: "<div style='height:130px;line-height:40px;font-size:24px;'>申请中止，项目将停止众筹，并且所有筹得的资金将返还给投资者，是否确定中止？</div>",
+                oktxt: "确认",
+                canceltxt: "取消"
+            });
+
+        }
+    </script>
+  </head>
+  <body>
+    <div class="tcgc_header">
+        <div class="clear tcgc_header_box">
+            <div class="fl tcgc_header_boxfl"><a href="javascript:;" class="tcgc_logo"><img src="images/logo_photo.png" alt=""/></a><a href="javascript:;" class="tcgc_txt tcgc_hover3"><img src="images/set_notebook.png" alt=""/>发起人手册</a></div>
+            <div class="fr tcgc_pd">
+                <span class="tcgc_pdspan"></span>
+                <a href="javascript:;" class="tcgc_box tcgc_mrr tcgc_hover3 tcgc_newsobj" onclick="tcgcfb()"><img src="images/mine_icon_release.png" alt=""/>发布新项目</a>
+                <a href="javascript:;" class="tcgc_box tcgc_hover3 tcgc_loginregi" id="tcgc_headlogin" onclick="boxmask()">注册登录</a>
+                <span class="tcgc_hide">
+                    <span class="tcgc_mrr tcgc_hbox">
+                        <i class="tcgc_setlist_i"></i>
+                        <i class="tcgc_headimg"  id="tcgc_headimg"><img width="30" height="30"  src="images/1.jpg" alt=""/></i>
+                        <i class="tcgc_user">张启航</i>
+                        <span class="tcgc_setlist">
+                            
+                            <a class="tcgc_meobj tcgc_hover9" href="我的项目.html"><!--<img src="images/u46.png" alt="" width="21" height="20"/>--><span>我的项目</span>
+</a>
+                            <a class="tcgc_meset tcgc_hover9" href="设置.html"><!--<img src="images/u48.png" alt="" width="25" height="21"/>--><span>我的设置</span>
+</a>
+                            <a class="tcgc_meset tcgc_hover9" href="JavaScript:;" onclick="tcgcout()"><!--<img src="images/u48.png" alt="" width="25" height="21"/>--><span>退出</span>
+</a>
+                        </span>
+                    </span>
+                    <a href="javascript:;" class="tcgc_mrr tcgc_msg" title="未读消息10条"><i class="tcgc_yesmsg"><!--没消息去掉样式tcgc_yesmsg--></i><img width="20" height="26"  src="images/u30.png" alt=""/></a>
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="tcgc_content tcgc_bg tcgc_wdxx">
+        <div class="tcgc_xmsz_contbox">
+            <div class="tcgc_xmsz_fr">
+                <div class="tcgc_set_boxbg">
+                   
+                   <div class="tcgc_width">
+                       <div class="tcgc_wfq_top clear">
+                           <div class="fl tcgc_wfq_toptab tcgc_wfq_toptab_select"><a href="我发起的.html">我发起的</a></div>
+                           <div class="fr tcgc_wfq_toptab"><a href="我的项目(我参与的).html">我参与的</a></div>
+                       </div>
+                       <div class="tcgc_wfq_itembox">
+                           <ul class="tcgc_width">
+                               <li class="clear">
+                                   <div class="tcgc_wfq_itmecont">
+                                       <div class="tcgc_wfq_itemimg"><img src="images/1.jpg" alt="" /></div>
+                                       <div class="tcgc_wfq_itempp">品牌</div>
+                                       <div class="tcgc_wfq_itemname">项目名称</div>
+                                       <div class="tcgc_wfq_itmecontbtn">
+                                           <span>预览</span>
+                                           <span>重新编辑</span>
+                                           <span class="tcgc_spanbg" onclick="tcgcdel()" id="sc">删除</span>
+                                       </div>
+                                   </div>
+                               </li>
+                               <li class="clear">
+                                   <div class="tcgc_wfq_itmecont">
+                                       <div class="tcgc_wfq_itemimg"><img src="images/1.jpg" alt="" /></div>
+                                       <div class="tcgc_wfq_itempp">品牌</div>
+                                       <div class="tcgc_wfq_itemname">项目名称</div>
+                                       <div class="tcgc_wfq_itmecontbtn">
+                                           <span onclick="tcgcdeldss()" id="ck">查看</span>
+                                       </div>
+                                   </div>
+                               </li>
+                               <li class="clear">
+                                   <div class="tcgc_wfq_itmecont">
+                                       <div class="tcgc_wfq_itemimg"><img src="images/1.jpg" alt="" /></div>
+                                       <div class="tcgc_wfq_itempp">品牌</div>
+                                       <div class="tcgc_wfq_itemname">项目名称</div>
+                                       <div class="tcgc_wfq_itmecontbtn">
+                                           <span>查看</span>
+                                           <span>更新进度</span>
+                                           <span class="tcgc_spanbg" onclick="tcgcsqzz()" id="sqzz">申请中止</span>
+                                       </div>
+                                   </div>
+                               </li>
+                               <li class="clear">
+                                   <div class="tcgc_wfq_itmecont">
+                                       <div class="tcgc_wfq_itemimg"><img src="images/1.jpg" alt="" /></div>
+                                       <div class="tcgc_wfq_itempp">品牌</div>
+                                       <div class="tcgc_wfq_itemname">项目名称</div>
+                                       <div class="tcgc_wfq_itmecontbtn">
+                                           <span>查看</span>
+                                       </div>
+                                   </div>
+                               </li>
+                               <li class="clear">
+                                   <div class="tcgc_wfq_itmecont">
+                                       <div class="tcgc_wfq_itemimg"><img src="images/1.jpg" alt="" /></div>
+                                       <div class="tcgc_wfq_itempp">品牌</div>
+                                       <div class="tcgc_wfq_itemname">项目名称</div>
+                                       <div class="tcgc_wfq_itmecontbtn">
+                                           <span>预览</span>
+                                           <span>重新编辑</span>
+                                           <span class="tcgc_spanbgred" onclick="tcgc_queren()" id="qrfb">确认发布</span>
+                                       </div>
+                                   </div>
+                               </li>
+                               <li class="clear">
+                                   <div class="tcgc_wfq_itmecont">
+                                       <div class="tcgc_wfq_itemimg"><img src="images/1.jpg" alt="" /></div>
+                                       <div class="tcgc_wfq_itempp">品牌</div>
+                                       <div class="tcgc_wfq_itemname">项目名称</div>
+                                       <div class="tcgc_wfq_itmecontbtn">
+                                           <span>预览</span>
+                                           <span>重新编辑</span>
+                                           <span class="tcgc_spanbg">删除</span>
+                                       </div>
+                                   </div>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="tcgc_wfq_subbox">
+                           <a href="javascript:;" class="tcgc_wfq_subsyb">上一步</a>
+                           <input type="submit" class="tcgc_wfq_subbtn"/>
+                           <a href="javascript:;" class="tcgc_wfq_subyl">预览</a>
+                       </div>
+                   </div>
+
+                    
+
+
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="tcgc_footer">
+        <div class="tcgc_link">
+            <a href="javascript:;">关于我们</a> | 
+            <a href="javascript:;">同城共创</a> | 
+            <a href="javascript:;" onclick="returnhead()">返回顶部</a>
+        </div>
+        <div class="tcgc_beian">备案信息</div>
+    </div>
+
+      
+  </body>
+</html>

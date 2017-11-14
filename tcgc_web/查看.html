@@ -1,0 +1,211 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>查看</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="description" content="你的描述内容"/> 
+    <meta name="keyword" content="关键字1,关键字2"/>
+    <link type="text/css" href="css/global.css" rel="Stylesheet" />
+    <link type="text/css" href="css/Garden.css" rel="Stylesheet" />
+    <script type="text/javascript" src="javascript/modernizr.custom.46884.js"></script>
+    <script type="text/javascript" src="javascript/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="javascript/global.js"></script>
+    <script type="text/javascript" src="javascript/jquery.slicebox.js"></script>
+    
+    <link type="text/css" href="css/joker.css" rel="Stylesheet" />
+    <script type="text/javascript" src="javascript/joker.js"></script>
+    <script type="text/javascript">
+        $(function(){
+             $(".yourInput").focusInput();
+             modebtn();
+			 $(".jyl_bfixed li").on("click",function(){
+				 var a = $("body .jyl_bl_main").eq($(this).index()).offset().top;
+				$('body,html').animate({scrollTop:a},1000);
+			 });
+        });
+        
+    </script>
+  </head>
+  <body>
+    <div class="tcgc_header">
+        <div class="clear tcgc_header_box">
+            <div class="fl tcgc_header_boxfl"><a href="javascript:;" class="tcgc_logo"><img src="images/logo_photo.png" alt=""/></a><a href="javascript:;" class="tcgc_txt tcgc_hover3"><img src="images/set_notebook.png" alt=""/>发起人手册</a></div>
+            <div class="fr tcgc_pd">
+                <span class="tcgc_pdspan"></span>
+                <a href="javascript:;" class="tcgc_box tcgc_mrr tcgc_hover3 tcgc_newsobj" onclick="tcgcfb()"><img src="images/mine_icon_release.png" alt=""/>发布新项目</a>
+                <a href="javascript:;" class="tcgc_box tcgc_hover3 tcgc_loginregi" id="tcgc_headlogin" onclick="boxmask()">注册登录</a>
+                <span class="tcgc_hide">
+                    <span class="tcgc_mrr tcgc_hbox">
+                        <i class="tcgc_setlist_i"></i>
+                        <i class="tcgc_headimg"  id="tcgc_headimg"><img width="30" height="30"  src="images/1.jpg" alt=""/></i>
+                        <i class="tcgc_user">张启航</i>
+                        <span class="tcgc_setlist">
+                            
+                            <a class="tcgc_meobj tcgc_hover9" href="我的项目.html"><!--<img src="images/u46.png" alt="" width="21" height="20"/>--><span>我的项目</span>
+</a>
+                            <a class="tcgc_meset tcgc_hover9" href="设置.html"><!--<img src="images/u48.png" alt="" width="25" height="21"/>--><span>我的设置</span>
+</a>
+                            <a class="tcgc_meset tcgc_hover9" href="JavaScript:;" onclick="tcgcout()"><!--<img src="images/u48.png" alt="" width="25" height="21"/>--><span>退出</span>
+</a>
+                        </span>
+                    </span>
+                    <a href="javascript:;" class="tcgc_mrr tcgc_msg" title="未读消息10条"><i class="tcgc_yesmsg"><!--没消息去掉样式tcgc_yesmsg--></i><img width="20" height="26"  src="images/u30.png" alt=""/></a>
+                </span>
+            </div>
+        </div>
+
+    </div>
+    
+    <div class="jyl_ban">
+    	<img alt="" src="images/1.jpg">
+    </div>
+    <div class="j_goxia_a_red_tjb">项目已提交，审核需要1-2个工作日</div>
+    
+    <div class="BoxBack3"></div>
+    <div class="j_sz_dz_x_table_sc_pd j_sz_dz_x_table_sc_pd2">
+    	<p>确定要删除此项目？</p>
+    	<p><span class="j_sz_dz_x_table_sc_pdy j_sz_dz_x_table_sc_pdy2">确定</span><span class="j_sz_dz_x_table_sc_pdn j_sz_dz_x_table_sc_pdn2">取消</span></p>
+    </div>
+    
+    <div class="jyl_b" id="jyl_b">
+    	<div class="jyl_bl fl">
+        	
+            <div class="jyl_bfixed">
+                <ul>
+                    <li class="jyl_bfixedli"><a title="我的自述">我的自述</a></li>
+                    <li><a title="我的项目">我的项目</a></li>
+                    <li><a title="商业信息表">商业信息表</a></li>
+                    <li><a title="我的团队">我的团队</a></li>
+                    <li><a title="我的回报">我的回报</a></li>
+                    <li><a title="为何众筹">为何众筹</a></li>
+                    <li><a title="项目进度">项目进度</a></li>
+                </ul>
+            </div>
+        	<p class="jyl_bl_time">2016.09.27</p>
+            <p class="jyl_bl_tit">去南方，聆听一场美宿大合唱</p>
+            <div class="jyl_bl_main" id="jyl_bl_main1">
+            	<div class="jyl_tit"><b>我的自述</b></div>
+                <div class="jyl_br_whzct">水墨江南/彩云江南</div>
+            	<div class="jyl_br_whzcb">我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细<p><img alt="" src="images/1.jpg"></p>我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细</div>
+            </div>
+            <div class="jyl_bl_main" id="jyl_bl_main2">
+            	<div class="jyl_tit"><b>我的项目</b></div>
+                <div class="jyl_br_whzct">水墨江南/彩云江南</div>
+            	<div class="jyl_br_whzcb">我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细<p><img alt="" src="images/1.jpg"></p>我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细</div>
+            </div>
+            <div class="jyl_bl_main" id="jyl_bl_main3">
+            	<div class="jyl_tit"><b>商业信息表</b></div>
+                <div class="jyl_br_whzc_table">
+                	<table cellspacing="0" cellpadding="0" width="100%">
+                    	<tr>
+                        	<td class="jyl_br_whzc_table_name">店铺名称</td>
+                            <td>彩云之南</td>
+                        </tr>
+                    	<tr>
+                        	<td class="jyl_br_whzc_table_name">店铺地址</td>
+                            <td>在山的海德旁边，在山的海德旁边在山的海德旁边，在山的海德旁边在山的海德旁边</td>
+                        </tr>
+                    	<tr>
+                        	<td class="jyl_br_whzc_table_name">店铺估值</td>
+                            <td>100万</td>
+                        </tr>
+                    	<tr>
+                        	<td class="jyl_br_whzc_table_name">退出节点</td>
+                            <td>2016.08.20</td>
+                        </tr>
+                    	<tr>
+                        	<td class="jyl_br_whzc_table_name">占地面积</td>
+                            <td>2000平方米</td>
+                        </tr>
+                    	<tr>
+                        	<td class="jyl_br_whzc_table_name">总建筑面积</td>
+                            <td>2000平方米</td>
+                        </tr>
+                    	<tr>
+                        	<td class="jyl_br_whzc_table_name">项目特色</td>
+                            <td>在山的海德旁边，在山的海德旁边在山的海德旁边，在山的海德旁边在山的海德旁边</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="jyl_bl_main" id="jyl_bl_main4">
+            	<div class="jyl_tit"><b>我的团队</b></div>
+                <div class="jyl_br_whzct">水墨江南/彩云江南</div>
+            	<div class="jyl_br_whzcb">我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细<p><img alt="" src="images/1.jpg"></p>我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细</div>
+            </div>
+            <div class="jyl_bl_main" id="jyl_bl_main5">
+            	<div class="jyl_tit"><b>我的回报</b></div>
+                <div class="jyl_br_whzct">水墨江南/彩云江南</div>
+            	<div class="jyl_br_whzcb">我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细<p><img alt="" src="images/1.jpg"></p>我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细</div>
+            </div>
+            <div class="jyl_bl_main" id="jyl_bl_main6">
+            	<div class="jyl_tit"><b>为何众筹</b></div>
+                <div class="jyl_br_whzct">水墨江南/彩云江南</div>
+            	<div class="jyl_br_whzcb">我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细<p><img alt="" src="images/1.jpg"></p>我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细</div>
+            </div>
+            <div class="jyl_bl_main" id="jyl_bl_main7">
+            	<div class="jyl_tit"><b>项目进度</b></div>
+                <div class="jyl_br_whzcb">我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细</div>
+            	<div class="jyl_br_whzc_jd">
+                	<ul>
+                    	<li>
+                        	<i class="jyl_br_whzc_jd_time">○<a>8.15</a></i>
+                            <div class="jyl_br_whzct">水墨江南/彩云江南</div>
+                            <div class="jyl_br_whzcb">我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细<p><img alt="" src="images/1.jpg"></p>我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细</div>
+                        </li>
+                        <li>
+                        	<i class="jyl_br_whzc_jd_time">○<a>8.15</a></i>
+                            <div class="jyl_br_whzct">水墨江南/彩云江南</div>
+                            <div class="jyl_br_whzcb">我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细<p><img alt="" src="images/1.jpg"></p>我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细</div>
+                        </li>
+                        <li>
+                        	<i class="jyl_br_whzc_jd_time">○<a>8.15</a></i>
+                            <div class="jyl_br_whzct">水墨江南/彩云江南</div>
+                            <div class="jyl_br_whzcb">我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    	<div class="jyl_br fr">
+        	<div class="jyl_br_mon">
+            	<p class="jyl_br_mon_name">认筹总额：</p>
+            	<p class="jyl_br_mon_length">120000.00</p>
+            	<p class="jyl_br_mon_name">目标金额：</p>
+            	<p class="jyl_br_mon_length">120000.00</p>
+                <div class="jyl_br_mon_tu"><i style="width:50%;"></i></div>
+                <div class="jyl_br_mon_tu_z"><a class="fl">50%</a><b>234人认筹</b><a class="fr">剩余54天</a></div>
+                <a href="javascript:;" title="查看投资人" class="jyl_br_mon_a">查看投资人</a>
+            </div>
+            <div class="jyl_tit"><b>我的回报</b></div>
+            <div class="jyl_br_hb">
+            	<ul>
+                	<li>
+                    	<a href="javascript:;" title="" class="jyl_br_hb_img"><img alt="" src="images/1.jpg"></a>
+                        <a href="javascript:;" title="" class="jyl_br_hb_name">我是文章标题我是文章标题我是文章标题我是文章标题</a>
+                        <span class="jyl_br_hb_box">我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细</span>
+                    	<p class="jyl_br_hb_length">认筹25人/剩余50人</p>
+                    </li>
+                    <li>
+                    	<a href="javascript:;" title="" class="jyl_br_hb_img"><img alt="" src="images/1.jpg"></a>
+                        <a href="javascript:;" title="" class="jyl_br_hb_name">我是文章标题我是文章标题我是文章标题我是文章标题</a>
+                        <span class="jyl_br_hb_box">我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细</span>
+                    	<p class="jyl_br_hb_length">认筹25人/剩余50人</p>
+                    </li>
+                    <li>
+                    	<a href="javascript:;" title="" class="jyl_br_hb_img"><img alt="" src="images/1.jpg"></a>
+                        <a href="javascript:;" title="" class="jyl_br_hb_name">我是文章标题我是文章标题我是文章标题我是文章标题</a>
+                        <span class="jyl_br_hb_box">我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细</span>
+                    	<p class="jyl_br_hb_length">认筹25人/剩余50人</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="jyl_tit"><b>为何众筹</b></div>
+            <div class="jyl_br_whzct">水墨江南/彩云江南</div>
+            <div class="jyl_br_whzcb">我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细我是文章详细</div>
+        </div>
+    </div>
+  </body>
+</html>

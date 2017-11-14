@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>支付页面</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="description" content="你的描述内容"/> 
+    <meta name="keyword" content="关键字1,关键字2"/>
+    <link type="text/css" href="css/global.css" rel="Stylesheet" />
+    <link type="text/css" href="css/Garden.css" rel="Stylesheet" />
+    <script type="text/javascript" src="javascript/modernizr.custom.46884.js"></script>
+    <script type="text/javascript" src="javascript/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="javascript/global.js"></script>
+    <script type="text/javascript" src="javascript/jquery.slicebox.js"></script>
+    
+	<script type="text/javascript" src="javascript/jquery.gyArea.js"></script>
+    <script type="text/javascript" src="javascript/zxb_pcasun.js"></script>
+    <link type="text/css" href="css/joker.css" rel="Stylesheet" />
+    <script type="text/javascript" src="javascript/joker.js"></script>
+    <script type="text/javascript">
+        $(function(){
+             $(".yourInput").focusInput();
+             modebtn();
+        });
+        
+    </script>
+  </head>
+  <body>
+    <div class="tcgc_header">
+        <div class="clear tcgc_header_box">
+            <div class="fl tcgc_header_boxfl"><a href="javascript:;" class="tcgc_logo"><img src="images/logo_photo.png" alt=""/></a><a href="javascript:;" class="tcgc_txt tcgc_hover3"><img src="images/set_notebook.png" alt=""/>发起人手册</a></div>
+            <div class="fr tcgc_pd">
+                <span class="tcgc_pdspan"></span>
+                <a href="javascript:;" class="tcgc_box tcgc_mrr tcgc_hover3 tcgc_newsobj" onclick="tcgcfb()"><img src="images/mine_icon_release.png" alt=""/>发布新项目</a>
+                <a href="javascript:;" class="tcgc_box tcgc_hover3 tcgc_loginregi" id="tcgc_headlogin" onclick="boxmask()">注册登录</a>
+                <span class="tcgc_hide">
+                    <span class="tcgc_mrr tcgc_hbox">
+                        <i class="tcgc_setlist_i"></i>
+                        <i class="tcgc_headimg"  id="tcgc_headimg"><img width="30" height="30"  src="images/1.jpg" alt=""/></i>
+                        <i class="tcgc_user">张启航</i>
+                        <span class="tcgc_setlist">
+                            
+                            <a class="tcgc_meobj tcgc_hover9" href="我的项目.html"><!--<img src="images/u46.png" alt="" width="21" height="20"/>--><span>我的项目</span>
+</a>
+                            <a class="tcgc_meset tcgc_hover9" href="设置.html"><!--<img src="images/u48.png" alt="" width="25" height="21"/>--><span>我的设置</span>
+</a>
+                            <a class="tcgc_meset tcgc_hover9" href="JavaScript:;" onclick="tcgcout()"><!--<img src="images/u48.png" alt="" width="25" height="21"/>--><span>退出</span>
+</a>
+                        </span>
+                    </span>
+                    <a href="javascript:;" class="tcgc_mrr tcgc_msg" title="未读消息10条"><i class="tcgc_yesmsg"><!--没消息去掉样式tcgc_yesmsg--></i><img width="20" height="26"  src="images/u30.png" alt=""/></a>
+                </span>
+            </div>
+        </div>
+
+    </div>
+    
+    <div class="jzf_b">
+    	<div class="jzf_bb">
+        	<div class="jzf_bb_tit">确认收货地址</div>
+            <div class="jzf_bb_table">
+            	<table cellspacing="0" cellpadding="0" width="100%">
+                	<tbody>
+                    	<tr class="jzf_bb_table_dq">
+                        	<td><i class="jzf_bb_table_i"></i></td>
+                            <td class="jzf_bb_table_name"><span style="width:50px;">阿萨德</span></td>
+                        	<td class="jzf_bb_table_phone"><span style="width:90px;">13158987752</span></td>
+                            <td class="jzf_bb_table_add"><span style="width:280px;">福建省厦门市思明区阿萨德斯达撒大声地阿萨德斯123123达撒大声地</span></td>
+                        	<td><span style="width:100px;">(默认地址)&nbsp;</span></td>
+                            <td class="jzf_bb_table_xg"><span style="width:100px;">(修改地址)&nbsp;</span></td>
+                        </tr>
+                        <tr>
+                        	<td><i class="jzf_bb_table_i"></i></td>
+                            <td class="jzf_bb_table_name"><span style="width:50px;">阿萨德</span></td>
+                        	<td class="jzf_bb_table_phone"><span style="width:90px;">13158987752</span></td>
+                            <td class="jzf_bb_table_add"><span style="width:280px;">福建省厦门市思明区阿萨德斯达撒大声地阿457567萨德斯达撒大声地</span></td>
+                        	<td></td>
+                            <td class="jzf_bb_table_xg"><span style="width:100px;">(修改地址)&nbsp;</span></td>
+                        </tr>
+                        <tr>
+                        	<td><i class="jzf_bb_table_i"></i></td>
+                            <td class="jzf_bb_table_name"><span style="width:50px;">阿萨德</span></td>
+                        	<td class="jzf_bb_table_phone"><span style="width:90px;">13158987752</span></td>
+                            <td class="jzf_bb_table_add"><span style="width:280px;">福建省厦门市思明区阿萨德斯达撒大声79823424地阿萨德斯达撒大声地</span></td>
+                        	<td></td>
+                            <td class="jzf_bb_table_xg"><span style="width:100px;">(修改地址)&nbsp;</span></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                    	<tr>
+                        	<td></td>
+                            <td colspan="5">
+                            	<a class="jzf_bb_cli1">+ 添加地址</a></a>
+                            	<a class="jzf_bb_cli2">显示更多</a>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        	<div class="jzf_bb_tit">确认收货地址</div>
+            <div class="jzf_bb_con">
+            	<ul>
+                	<li>
+                    	<a class="jzf_bb_con_img"><img alt="" src="images/1.jpg"></a>
+                        <p class="jzf_bb_con_name">项目标题</p>
+                        <p class="jzf_bb_con_name1">投资的回报名称</p>
+                        <p class="jzf_bb_con_money">¥1000000.00</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="jzf_bb_addd">
+            	<a class="jzf_bb_addd1">阿萨德</a>
+            	<a class="jzf_bb_addd2">13025698745</a>
+            	<a class="jzf_bb_addd3">福建省厦门市思明区阿达撒的</a>
+            </div>
+            <div class="jzf_bb_yue"><a data-id="y">使用账户余额：¥8000.00</a></div>
+            <div class="jzf_bb_zifu">
+            	<span>带需支付 <b>¥8000.00</b></span><input type="submit" value="确认支付"/>
+            </div>
+        </div>
+    </div>
+    <div class="jzf_bb_add_tbox">
+    	<div class="jzf_bb_add_tbox_tit">收货地址</div>
+        <table cellspacing="0" cellpadding="0" class="j_table1 j_table5">
+            <tr>
+                <td class="j_table1_name">真实姓名</td>
+                <td><input name="" type="text" class="j_table1_input1"></td>
+            </tr>
+            <tr>
+                <td class="j_table1_name">手机号码</td>
+                <td><input name="" type="text" onblur="checkPhone($(this));" maxlength="11" class="j_table1_input1"></td>
+            </tr>
+            <tr>
+                <td class="j_table1_name">发布地址</td>
+                <td class="position">
+                    <div class="clear">
+                                                <div class="j_table1_input8 j_table1_input_xiala j_table1_input_add_sheng1 fl position">
+                                                	<span class="j_table1_input_add_sheng1_span">省</span>
+                                                    <div class="j_table1_input_add_box1"></div>
+                                                    <div class="BoxBack5"></div>
+                                                </div>
+                                                <div class="j_table1_input8 j_table1_input_xiala j_table1_input_add_shi1 fl position">
+                                                <span class="j_table1_input_add_shi1_span">市</span>
+                                                    <div class="j_table1_input_add_box2"></div>
+                                                    <div class="BoxBack5"></div>
+                                                </div>
+                                                <div class="j_table1_input8 j_table1_input_xiala j_table1_input_add_qu1 fr position">
+                                                <span class="j_table1_input_add_qu1_span">区</span>
+                                                    <div class="j_table1_input_add_box3"></div>
+                                                    <div class="BoxBack5"></div>
+                                                </div>
+                                            </div>
+                                            <div class="j_table1_input1 j_table1_input_xiala j_table1_input_add_jingquedizhi1 position">
+                                            	<span class="j_table1_input_add_jingquedizhi1_span">精确地址</span>
+                                            	<div class="j_table1_input_add_box4">
+                                                	<a>软件园3期22栋202室</a>
+                                                	<a>软件园3期22栋302室</a>
+                                                	<a>软件园3期22栋402室</a>
+                                                	<a>软件园3期22栋502室</a>
+                                                	<a>软件园3期22栋602室</a>
+                                                </div>
+                                                <div class="BoxBack5"></div>
+                                            </div>
+                </td>
+            </tr>
+            <tr>
+            	<td>&nbsp;</td>
+            	<td>
+                    <input name="" type="submit" class="jzf_bb_add_tbox_click1" value="确定">
+                	<a class="jzf_bb_add_tbox_click2">取消</a>
+                </td>
+            </tr>
+        </table>
+        
+    </div>
+    <div class="BoxBack3"></div>
+    
+    
+  </body>
+</html>

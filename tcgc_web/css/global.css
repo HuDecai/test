@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+/*网站基本定义*/
+body,div,form,img,ul,ol,li,dl,dt,dd,p,strong,span,pre,input{margin:0; padding:0; border:0;}
+h1,h2,h3,h4,h5,h6,p{ margin:0; padding:0; font-weight:normal;outline:none;}
+body{font-family:"Arial Normal", "Arial"; color: #333;font-size: 12px;}
+ul,li{ list-style:none;}
+em{ font-style:normal;}
+a{ text-decoration:none; color:#000; outline:none;}
+a:hover{}
+span,i,img,input,textarea{vertical-align:middle;}
+/*网站基本定义*/
+.tcgc_bg{background-color: #efefef;}
+.content{  width:1003px; margin:0 auto;}/*网站主体部分宽*/
+.clear:after {visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0;}
+.clear {clear:both; /* for IE6 IE7 */}
+.fl{float:left;}
+.fr{float:right;}

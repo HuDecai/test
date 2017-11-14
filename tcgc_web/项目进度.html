@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>项目进度</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="description" content="你的描述内容"/> 
+    <meta name="keyword" content="关键字1,关键字2,---"/>
+    <link type="text/css" href="css/global.css" rel="Stylesheet" />
+    <link type="text/css" href="css/Garden.css" rel="Stylesheet" />
+    <script type="text/javascript" src="javascript/modernizr.custom.46884.js"></script>
+    <script type="text/javascript" src="javascript/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="javascript/global.js"></script>
+    <script type="text/javascript" src="javascript/jquery.slicebox.js"></script>
+    
+    <script type="text/javascript">
+        $(function(){
+             $(".yourInput").focusInput();
+             modebtn();
+        });
+        
+    </script>
+  </head>
+  <body>
+    <div class="tcgc_header">
+        <div class="clear tcgc_header_box">
+            <div class="fl tcgc_header_boxfl"><a href="javascript:;" class="tcgc_logo"><img src="images/logo_photo.png" alt=""/></a><a href="javascript:;" class="tcgc_txt tcgc_hover3"><img src="images/set_notebook.png" alt=""/>发起人手册</a></div>
+            <div class="fr tcgc_pd">
+                <span class="tcgc_pdspan"></span>
+                <a href="javascript:;" class="tcgc_box tcgc_mrr tcgc_hover3 tcgc_newsobj" onclick="tcgcfb()"><img src="images/mine_icon_release.png" alt=""/>发布新项目</a>
+                <a href="javascript:;" class="tcgc_box tcgc_hover3 tcgc_loginregi" id="tcgc_headlogin" onclick="boxmask()">注册登录</a>
+                <span class="tcgc_hide">
+                    <span class="tcgc_mrr tcgc_hbox">
+                        <i class="tcgc_setlist_i"></i>
+                        <i class="tcgc_headimg"  id="tcgc_headimg"><img width="30" height="30"  src="images/1.jpg" alt=""/></i>
+                        <i class="tcgc_user">张启航</i>
+                        <span class="tcgc_setlist">
+                            
+                            <a class="tcgc_meobj tcgc_hover9" href="我的项目.html"><!--<img src="images/u46.png" alt="" width="21" height="20"/>--><span>我的项目</span>
+</a>
+                            <a class="tcgc_meset tcgc_hover9" href="设置.html"><!--<img src="images/u48.png" alt="" width="25" height="21"/>--><span>我的设置</span>
+</a>
+                            <a class="tcgc_meset tcgc_hover9" href="JavaScript:;" onclick="tcgcout()"><!--<img src="images/u48.png" alt="" width="25" height="21"/>--><span>退出</span>
+</a>
+                        </span>
+                    </span>
+                    <a href="javascript:;" class="tcgc_mrr tcgc_msg" title="未读消息10条"><i class="tcgc_yesmsg"><!--没消息去掉样式tcgc_yesmsg--></i><img width="20" height="26"  src="images/u30.png" alt=""/></a>
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="tcgc_content tcgc_bg">
+        <div></div>
+        <div class="tcgc_xmsz_banner"><img src="images/1.jpg" alt="" /></div>
+        <div class="tcgc_xmsz_contbox">
+            <div class="tcgc_xmsz_boxp">
+                <ul class="clear tcgc_xmsz_tab">
+                    <li><div class="tcgc_xmsz_title">项目设置</div><span class="tcgc_fffboder"></span><span class="tcgc_yq">1</span></li>
+                    <li><div class="tcgc_xmsz_title">内容编辑</div><span class="tcgc_fffboder"></span><span class="tcgc_yq">2</span></li>
+                    <li class="tcgc_select"><div class="tcgc_xmsz_title">项目进度</div><span class="tcgc_fffboder"></span><span class="tcgc_yq">3</span></li>
+                </ul>
+            </div>
+            <div class="tcgc_xmsz_fr">
+                <div class="tcgc_xmsz_bgff">
+                   <!--start-->
+                   <link type="text/css" href="css/joker.css" rel="Stylesheet" />
+					<script type="text/javascript" charset="gbk" src="javascript/ueditor.config.js"></script>
+    					<script type="text/javascript" charset="gbk" src="javascript/ueditor.all.js"> </script>
+    					<script type="text/javascript" charset="gbk" src="javascript/zh-cn.js"> </script>
+                    <script type="text/javascript" src="javascript/joker.js"></script>
+                    <div class="j_zs_title">项目进度</div>
+                    <div class="position bottom10" id="inputlength1"><span class="j_table1_input4_name">标题</span><input name="" type="text" maxlength="30"  class="j_table1_input4 j_inputlengthb"><span class="j_table1_length j_inputlengths"><i>0</i> / 30</span></div>
+                    <script id="editor" type="text/plain" style="width:100%;height:300px;"></script>
+                    <script type="text/javascript">
+                        //实例化编辑器
+                        //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+                        $(function () {
+
+                            UE.getEditor('editor', {
+                                toolbars: [
+                                    ["fontfamily", "bold", "italic", "underline", "justifyright", "justifycenter", "justifyleft", "insertvideo", "simpleupload"]
+                                ]
+
+                            });
+                        });
+								</script>	
+                    <div class="j_goxia_a"><a href="为何众筹.html" title="为何众筹" class="j_goxia_a_hui">上一步</a><input name="" type="submit" class="j_goxia_a_red_gai" value="提交" id="j_goxia_a_red_tjc"><a class="j_goxia_a_yl" href="预览.html" title="预览界面">预览</a></div>
+                    <div class="j_goxia_a_red_tjb">项目已提交，审核需要1-2个工作日</div>
+                   <!--end-->
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="tcgc_footer">
+        <div class="tcgc_link">
+            <a href="javascript:;">关于我们</a> | 
+            <a href="javascript:;">同城共创</a> | 
+            <a href="javascript:;" onclick="returnhead()">返回顶部</a>
+        </div>
+        <div class="tcgc_beian">备案信息</div>
+    </div>
+  </body>
+</html>
